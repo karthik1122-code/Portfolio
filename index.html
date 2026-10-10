@@ -150,7 +150,7 @@ body{--g:0}
 .hp{position:relative;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px;max-width:calc(100% - 140px)}
 .hp a{border:1px solid var(--line);border-radius:999px;padding:0 20px;min-height:44px;display:inline-flex;align-items:center;font-weight:700;background:rgba(7,8,13,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .25s,color .25s}
 .hp a:hover{background:var(--bone);color:var(--ink)}.hp a.pri{background:var(--sig);color:var(--ink);border-color:var(--sig)}.hp a.pri:hover{background:var(--bone);border-color:var(--bone)}
-.l{transition:transform .35s cubic-bezier(.2,.8,.2,1),font-variation-settings .5s cubic-bezier(.2,.8,.2,1)}
+.l{transition:transform .35s cubic-bezier(.2,.8,.2,1)}.vt{display:inline-block}
 #cur.hov{width:46px;height:46px;margin:-23px 0 0 -23px;transition:width .25s,height .25s,margin .25s}#cur{transition:width .25s,height .25s,margin .25s}
 #hire{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:65;transform:translate(-50%,160%);display:flex;align-items:center;gap:6px;padding:7px 7px 7px 20px;border-radius:999px;background:rgba(243,239,230,.96);color:var(--ink);box-shadow:0 12px 40px rgba(0,0,0,.4);transition:transform .7s cubic-bezier(.2,.8,.2,1);max-width:calc(100vw - 24px);white-space:nowrap}
 #hire.on{transform:translate(-50%,0)}#hire .dot{flex:none;margin-right:6px}#hire .tx{font-weight:700;margin-right:10px}
@@ -359,6 +359,10 @@ $('#mf').innerHTML=$('#mf').dataset.t.replace(/\*([^*]+)\*/g,(m,a)=>a.split(' ')
 const W=$$('.mf .w');
 $('#track').innerHTML=PRJ.map((p,i)=>`<a class="card" href="#/work/${SLUG[i]}" data-i="${i}" data-cur="View" aria-label="View the ${p[0]} case study"><span class="idx mono">0${i+1}</span><div class="art a${i}"><img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" loading="lazy" width="1100" height="688">${LIVE[i]?`<span class="live mono"><i></i>Live</span>`:''}</div><h3>${p[0]}</h3><p>${p[1]}</p><span class="chip mono">${p[2]}</span></a>`).join('');
 $$('.card').forEach(c=>c.onclick=e=>{e.preventDefault();openCase(+c.dataset.i)});
+/* kinetic type: always-on variable-weight wave (no pointer needed, so it shows on touch screens too) */
+const VT=[];{const c=$('#contact .big');if(c){const t=c.textContent;c.setAttribute('aria-label',t);c.textContent='';[...t].forEach(ch=>{const s=document.createElement('span');s.setAttribute('aria-hidden','true');s.className='vt';s.textContent=ch===' '?'\u00a0':ch;c.appendChild(s);VT.push(s)})}}
+L.forEach(s=>{s.style.transition='transform .35s cubic-bezier(.2,.8,.2,1)'});
+const HT=$$('h2.big,.wh h2,.sbt,#ev-h');
 let LN=null;if(!RM&&FINE&&typeof Lenis!=='undefined'){try{LN=new Lenis({lerp:.11,wheelMultiplier:.95})}catch(e){LN=null}}
 
 /* cursor + label + letters */
@@ -408,6 +412,11 @@ function sizeWork(){if(innerWidth<=820){wk.style.height='auto';maxX=0;return}max
 addEventListener('resize',sizeWork);
 (function loop(now){if(LN)LN.raf(now||performance.now());cx0+=(tx-cx0)*.18;cy0+=(ty-cy0)*.18;const cu=$('#cur');cu.style.transform=`translate(${cx0}px,${cy0}px)`;$('#curt').style.transform=`translate(${cx0}px,${cy0}px)`;
  drawGL(now||0);
+ if(!RM){const T=(now||0)/1000;
+  if(heroVis)L.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(560+240*Math.sin(T*1.7-i*.62))}`);
+  const cr=$('#contact').getBoundingClientRect();if(cr.top<innerHeight&&cr.bottom>0)VT.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(540+260*Math.sin(T*2-i*.7))}`);
+  HT.forEach(h=>{const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const k=clamp(1-(r.top+r.height/2)/innerHeight,0,1);h.style.fontVariationSettings=`'wght' ${Math.round(300+500*Math.sin(k*Math.PI))}`})}
+
  $('#bar').style.transform=`scaleX(${clamp(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight),0,1)})`;
  const dy=scrollY-lastY;lastY=scrollY;vel+=(dy-vel)*.1;skew+=(clamp(vel*.45,-10,10)-skew)*.15;
  if(!RM){mq-=1.4+Math.abs(vel)*.6;const w=$('#mq').scrollWidth/2;if(-mq>w)mq=0;$('#mq').style.transform=`translateX(${mq}px) skewX(${-skew}deg)`}
