@@ -210,6 +210,16 @@ body{--g:0}
 #sb-log{list-style:none;margin:0;padding:0;display:grid;gap:6px}#sb-log li{display:flex;gap:10px;align-items:baseline;font-size:15px;border-top:1px solid var(--line);padding-top:8px}#sb-log b{flex:none;min-width:74px}
 @media(max-width:900px){.sbg{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.rv{clip-path:none;transform:none}#wipe{display:none}.an path{animation:none}.art canvas.dist{display:none}}
+
+.pf{background:var(--ink);color:var(--bone);padding:72px 24px 110px;border-top:1px solid var(--line)}
+.pf-g{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.pf-g{grid-template-columns:1fr}}
+.pf-n{margin:0 0 12px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.pf-d{margin:0;color:var(--dim);max-width:40ch}
+.pf h3{margin:0 0 14px;font:500 13px 'DM Mono',monospace;color:var(--dim)}
+.pf a,.pf span{display:block;padding:6px 0;color:var(--bone);overflow-wrap:anywhere}.pf a:hover{color:var(--sig)}
+.pf-b{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:56px 0 0;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+.pf-b a,.pf-b span{display:inline;padding:0;color:inherit}
 </style>
 </head>
 <body class="lock">
@@ -330,6 +340,11 @@ body{--g:0}
 </section>
 </main>
 
+<footer class="pf"><div class="pf-g">
+<div><p class="pf-n">Karthik Uppari</p><p class="pf-d">B.Tech CS (AI/ML) student in Hyderabad, building backend systems and AI products. Open to software engineering internships.</p></div>
+<div role="navigation" aria-label="Footer"><h3>Pages</h3><a href="#work">Work</a><a href="#evidence">Evidence</a><a href="#sandbox">Try it</a><a href="#path">Path</a><a href="#contact">Contact</a></div>
+<div><h3>Elsewhere</h3><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a><a href="assets/Karthik_Uppari_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a><span>upparikarthik505@gmail.com</span></div>
+</div><div class="pf-b"><span>© 2026 Karthik Uppari · Hyderabad, India</span><a href="#top" class="sc">Back to top ↑</a></div></footer>
 <section id="case" role="dialog" aria-modal="true" aria-label="Case study" aria-hidden="true" data-lenis-prevent><button id="cx" class="mono">Close · Esc</button><div id="cbody"></div></section>
 <div id="pal" role="dialog" aria-modal="true" aria-label="Command palette"><div><input id="pin" placeholder="Jump to…" aria-label="Command"><ul id="pls" role="listbox"></ul></div></div>
 
