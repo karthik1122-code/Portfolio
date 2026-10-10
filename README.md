@@ -27,12 +27,20 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 
 Plain HTML, CSS and JavaScript in a single file. No framework, no build step and no dependencies. Fonts load from Google Fonts.
 
+## What is on the page
+
+- A WebGL hero, scroll-driven gallery and manifesto, a ⌘K command palette, and smooth scrolling (Lenis, loaded from a CDN, off when reduced motion is requested).
+- A case-study page for each project with the problem, the decision, the measured result, what I would do differently, an architecture diagram and a screen recording. Deep links like `#/work/agentgate` open them directly.
+- An Evidence section with the real evaluation numbers and their caveats.
+- A policy sandbox that runs AgentGate's own policy engine and argument checks in the browser against a simulated workspace. The engine code is copied from the AgentGate repo; nothing is executed.
+- Reduced-motion and keyboard support. The only automated accessibility finding (axe-core) is the intentionally dimmed, not-yet-read words in the scroll-scrubbed About text.
+
 ## Project structure
 
 ```
 index.html   the whole site (markup, styles, scripts)
 og.png       social share image (1200×630)
-assets/      project screenshots used in the Work section
+assets/      project screenshots (WebP), short screen recordings of the apps (WebM and MP4), and the résumé PDF
 ```
 
 ## Run locally
