@@ -8,6 +8,7 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 
 - **Hero:** a real-time liquid-metal 3D shape (WebGL raymarching shader) that follows the cursor, with a static gradient fallback when WebGL is unavailable.
 - **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, DocuMind and AgentGate.
+- **Evidence:** animated charts of the measured results from each project, each with its caveat next to it.
 - **Toolkit, Path, How I build, Contact:** skills, education and experience, working style, and ways to reach me.
 - **⌘K / Ctrl+K command palette** for jumping around the site.
 - **Accessibility and motion:** keyboard navigation, focus-trapped dialogs, a skip link, and full `prefers-reduced-motion` support.
