@@ -7,7 +7,7 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 ## What's inside
 
 - **Hero:** a real-time liquid-metal 3D shape (WebGL raymarching shader) that follows the cursor, with a static gradient fallback when WebGL is unavailable.
-- **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, Nimbus and Balaji Family Dhaba.
+- **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, DocuMind and AgentGate.
 - **Toolkit, Path, How I build, Contact:** skills, education and experience, working style, and ways to reach me.
 - **⌘K / Ctrl+K command palette** for jumping around the site.
 - **Accessibility and motion:** keyboard navigation, focus-trapped dialogs, a skip link, and full `prefers-reduced-motion` support.
@@ -19,8 +19,8 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 | --- | --- | --- |
 | CogniSpace | Notes, docs and a sprint board with an AI Copilot | [Code](https://github.com/karthik1122-code/cognispace) · [Live](https://cognispace-sigma.vercel.app) |
 | RecoverFlow | Policy-first AI revenue recovery for failed Razorpay payments | [Code](https://github.com/karthik1122-code/recoverflow) · [Live](https://recoverflow-ten.vercel.app) |
-| Nimbus | AI analytics product site (front end only, simulated data) | [Code](https://github.com/karthik1122-code/nimbus) |
-| Balaji Family Dhaba | Responsive digital menu site | [Code](https://github.com/karthik1122-code/balaji-chilukur-family-dhaba) · [Live](https://balaji-chilukur-family-dhaba-fawn.vercel.app) |
+| DocuMind | Evaluation-first question answering over the Express 5 docs | [Code](https://github.com/karthik1122-code/documind) |
+| AgentGate | Policy gate and approval runtime for AI agent tool calls | [Code](https://github.com/karthik1122-code/agentgate) |
 
 ## Tech
 
