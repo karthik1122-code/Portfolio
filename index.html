@@ -490,7 +490,7 @@ addEventListener('keydown',e=>{if(!cs.classList.contains('on')||pal.classList.co
 
 
 /* ---------- v2: case-study pages, routing, wipe ---------- */
-const VID=[null,'v1','v2','v3'];
+const WALK=['cognispace','recoverflow','documind','agentgate'];
 const CS2=[
  {p:'Notes, docs and tasks live in different tools, and most AI features paste text into your page without asking.',d:'AI output never lands straight on the page. It streams into a review panel you can stop, then you insert it, and you can undo that. Autosave only says Saved after the server confirms, and a version check turns a conflict into a choice instead of a silent overwrite.',r:'Live on Vercel. Block editor, Copilot, version history with restore, a ⌘K palette and a sprint board. The bundle is code-split, so the landing page loads without the editor.',x:'Add real-time collaboration: two tabs on one page are settled by the version check today, not merged live. And the Copilot’s answers are not measured against a test set the way DocuMind’s are.'},
  {p:'A failed payment is lost revenue, but letting an AI refund, retry or message customers on its own is a risk nobody should take with money.',d:'The AI only proposes a diagnosis. A deterministic policy layer decides what is allowed, and a human approves one bounded action. Each webhook is processed once: the idempotency key, the event and the audit record commit in a single transaction.',r:'On 47 hard messages, diagnosis accuracy went from 72.3% to 97.9% after fixing what the first run exposed, with 0 unsafe actions. 200 simultaneous deliveries produced one record. 49 tests and CI. Razorpay Test Mode only.',x:'I tuned the rules on the same 47 cases, so 97.9% is a regression gate, not live accuracy. Next is a held-out set from real test-mode traffic, and measuring the Gemini diagnosis path, which I have not done yet.'},
@@ -514,8 +514,8 @@ function lockScroll(on){document.body.classList.toggle('lock',on);if(LN){on?LN.s
 const wIn=t=>new Promise(r=>{wipe.className='';wipe.textContent=t||'';void wipe.offsetWidth;wipe.classList.add('cov');setTimeout(r,520)});
 const wOut=()=>{wipe.classList.remove('cov');wipe.classList.add('out');setTimeout(()=>{wipe.className='';wipe.textContent=''},580)};
 function caseHTML(i){const p=PRJ[i],c=CASE[i],k=CS2[i],nx=(i+1)%PRJ.length;
- const media=VID[i]?`<video poster="assets/p${i}.webp" autoplay muted loop playsinline controls preload="metadata" aria-label="Screen recording of ${p[0]}"><source src="assets/${VID[i]}.webm" type="video/webm"><source src="assets/${VID[i]}.mp4" type="video/mp4"></video>`:`<img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" width="1100" height="688">`;
- const cap=VID[i]?'Screen recording of the local build with demo data. No audio.':'Screenshot of the live app';
+ const media=`<video poster="assets/walk-${WALK[i]}.webp" controls playsinline preload="none" width="1920" height="1080" aria-label="Narrated walkthrough of ${p[0]}, about one minute"><source src="assets/walk-${WALK[i]}.webm" type="video/webm"><source src="assets/walk-${WALK[i]}.mp4" type="video/mp4"></video>`;
+ const cap='Narrated walkthrough of the live app, about one minute. Press play for sound.';
  return `<div class="cs-in"><p class="mono" style="color:var(--dim)">Work / 0${i+1} of 0${PRJ.length}</p><h2 class="cs-t" id="cs-h">${p[0]}</h2><p class="cs-sum">${c.sum}</p><p class="mono" style="color:var(--dim)">${c.stack}</p>
 <div class="lk">${c.demo?`<a href="${c.demo}" target="_blank" rel="noopener">Live demo</a>`:''}${c.repo?`<a href="${c.repo}" target="_blank" rel="noopener">View code</a>`:''}</div>
 <figure class="cs-shot">${media}<figcaption class="mono">${cap}</figcaption></figure>
