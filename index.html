@@ -11,7 +11,16 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://karthik1122-code.github.io/og.png"><meta name="author" content="Karthik Uppari">
 <link rel="canonical" href="https://karthik1122-code.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF5A1F'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='800' font-size='40' text-anchor='middle' fill='%2307080D'%3EK%3C/text%3E%3C/svg%3E">
-<noscript><style>.rv,.l,.fu,nav,.wm>span{opacity:1!important;clip-path:none!important;transform:none!important;animation:none!important}#pre{display:none}body.lock{overflow:auto}.mf .w{opacity:1}</style></noscript>
+<noscript><style>.rv,.l,.fu,nav,.wm>span{opacity:1!important;clip-path:none!important;transform:none!important;animation:none!important}#pre{display:none}body.lock{overflow:auto}.mf .w{opacity:1}
+/* kinetic type: each letter rises through its word's mask; the pointer lifts letters near it */
+.kin .kin-h .kw{display:inline-block;overflow:hidden;padding:.08em 0 .14em;margin:-.08em 0 -.14em;vertical-align:top}
+.kin .kin-h .kl{display:inline-block;transform:translateY(112%) rotate(6deg);transform-origin:0 100%;opacity:0;will-change:transform}
+.kin .kin-h.kin-in .kl{transform:translateY(calc(var(--w,0)*-.12em)) rotate(calc(var(--w,0)*-3deg));opacity:1;transition:transform .7s cubic-bezier(.2,.9,.2,1) calc(var(--i)*22ms),opacity .3s ease calc(var(--i)*22ms)}
+.kin .kin-h.kin-in.kin-done .kl{transition:transform .25s ease-out;transition-delay:0s}
+.kin .kin-h[data-kin=scramble] .kl{transform:none;opacity:1;transition:none}
+.kin .kin-h[data-kin=scramble]:not(.kin-in) .kl{opacity:0}
+.kin .kin-h[data-kin=scramble].kin-in .kl{transition:opacity .01s}
+</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Karthik Uppari","url":"https://karthik1122-code.github.io/","jobTitle":"Software engineering intern candidate","email":"upparikarthik505@gmail.com","sameAs":["https://github.com/karthik1122-code","https://linkedin.com/in/karthik-uppari-4005a7373"],"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -333,6 +342,7 @@ body{--g:0}
 <section id="case" role="dialog" aria-modal="true" aria-label="Case study" aria-hidden="true" data-lenis-prevent><button id="cx" class="mono">Close · Esc</button><div id="cbody"></div></section>
 <div id="pal" role="dialog" aria-modal="true" aria-label="Command palette"><div><input id="pin" placeholder="Jump to…" aria-label="Command"><ul id="pls" role="listbox"></ul></div></div>
 
+<script type="module">import {kinetic} from "./kinetic.js";kinetic("#ev-h, #sb-h",{hero:"#none"});</script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
