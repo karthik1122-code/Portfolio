@@ -21,7 +21,7 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 | CogniSpace | Notes, docs and a sprint board with an AI Copilot | [Code](https://github.com/karthik1122-code/cognispace) · [Live](https://cognispace-sigma.vercel.app) |
 | RecoverFlow | Policy-first AI revenue recovery for failed Razorpay payments | [Code](https://github.com/karthik1122-code/recoverflow) · [Live](https://recoverflow-0qjg.onrender.com) |
 | DocuMind | Evaluation-first question answering over the Express 5 docs | [Code](https://github.com/karthik1122-code/documind) · [Live](https://documind-opal-alpha.vercel.app) |
-| AgentGate | Policy gate and approval runtime for AI agent tool calls | [Code](https://github.com/karthik1122-code/agentgate) · [Live](https://agentgate-h8nkm585q-karthik-upparis-projects.vercel.app) |
+| AgentGate | Policy gate and approval runtime for AI agent tool calls | [Code](https://github.com/karthik1122-code/agentgate) · [Live](https://agentgate-karthik-upparis-projects.vercel.app) |
 
 ## Tech
 
