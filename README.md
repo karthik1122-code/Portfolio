@@ -4,7 +4,9 @@
 
 Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, Hyderabad, building backend systems and AI products. Open to software engineering internships.
 
-## What's inside
+The main page (`index.html`) is a simple, resume-based portfolio: hero, about, skills, three projects, experience, education, resume download and contact. The earlier 3D motion version is kept at `creative.html`.
+
+## What's inside (creative version)
 
 - **Hero:** a real-time liquid-metal 3D shape (WebGL raymarching shader) that follows the cursor, with a static gradient fallback when WebGL is unavailable.
 - **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, DocuMind, AgentGate and SpendLog.
