@@ -7,7 +7,7 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 ## What's inside
 
 - **Hero:** a real-time liquid-metal 3D shape (WebGL raymarching shader) that follows the cursor, with a static gradient fallback when WebGL is unavailable.
-- **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, DocuMind and AgentGate.
+- **Selected work:** a pinned horizontal gallery with real screenshots and case-study overlays for CogniSpace, RecoverFlow, DocuMind, AgentGate and SpendLog.
 - **Evidence:** animated charts of the measured results from each project, each with its caveat next to it.
 - **Toolkit, Path, How I build, Contact:** skills, education and experience, working style, and ways to reach me.
 - **⌘K / Ctrl+K command palette** for jumping around the site.
@@ -22,6 +22,7 @@ Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, H
 | RecoverFlow | Policy-first AI revenue recovery for failed Razorpay payments | [Code](https://github.com/karthik1122-code/recoverflow) · [Live](https://recoverflow-0qjg.onrender.com) |
 | DocuMind | Evaluation-first question answering over the Express 5 docs | [Code](https://github.com/karthik1122-code/documind) · [Live](https://documind-opal-alpha.vercel.app) |
 | AgentGate | Policy gate and approval runtime for AI agent tool calls | [Code](https://github.com/karthik1122-code/agentgate) · [Live](https://agentgate-lake.vercel.app) |
+| SpendLog | Full-stack expense tracker with budgets, search and CSV export | [Code](https://github.com/karthik1122-code/spendlog) · [Live](https://spendlog-e525.onrender.com) |
 
 ## Tech
 
