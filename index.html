@@ -288,6 +288,40 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 .hero{gap:0}
 @media(max-width:979px){.lp{margin-top:40px}}
 .hp a{padding:11px 18px!important;font-size:15px!important;min-height:44px}
+
+/* ---------- v5: one calm canvas, contained panels ---------- */
+:root{--gx:max(24px,calc((100vw - 1180px)/2));--hair:rgba(243,239,230,.12)}
+nav{padding-left:var(--gx);padding-right:var(--gx)}
+.hero,.pin{padding-left:var(--gx);padding-right:var(--gx)}
+.blk{border-radius:0;margin-top:0;padding:104px var(--gx);border-top:1px solid var(--hair)}
+.lbl{color:var(--sig)!important;font-size:13px;letter-spacing:.04em;margin:0 0 18px}
+.paper{background:transparent;color:var(--bone)}.paper .mono{color:var(--dim)}
+.pin{padding-top:104px;padding-bottom:96px;border-top:1px solid var(--hair)}
+.wh h2,.sbt,#tk-h,#pa-h,.ev h2{font-size:clamp(32px,4.2vw,56px)!important;line-height:1.04;letter-spacing:-.04em;font-weight:700}
+.mf{font-size:clamp(24px,3vw,40px);max-width:34ch;line-height:1.2}
+.stats{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:56px;border:0;padding:0}
+.stats>div{border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(180deg,rgba(243,239,230,.06),rgba(243,239,230,.02))}
+.stats b{font-size:clamp(48px,5.2vw,76px);letter-spacing:-.05em;line-height:1;color:var(--bone)}.stats span{color:var(--dim);font-size:16px;margin-top:12px;max-width:30ch}
+.card{background:linear-gradient(180deg,rgba(243,239,230,.06),rgba(243,239,230,.02));border-color:var(--hair);padding:20px}
+.card:hover{border-color:var(--sig)}
+.met{display:block;color:var(--sig);font-size:12.5px;line-height:1.45;margin-top:6px}
+.ev{margin:0 var(--gx);border-radius:28px;padding:72px 48px}
+.ev .lbl{color:var(--pd)!important}
+.sbx{padding-bottom:104px}
+.bluebg{background:transparent;color:var(--bone)}
+.tg{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:36px}
+.tg>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:linear-gradient(180deg,rgba(43,59,255,.16),rgba(43,59,255,.04))}
+.tg h3{font-size:18px;margin:0 0 14px;font-weight:600}
+.chips span{padding:7px 14px;font-size:14.5px;margin:0 6px 8px 0;border-color:rgba(243,239,230,.34)}.chips span:hover{background:var(--bone);color:var(--ink)}
+.now{display:block;border:1px solid var(--line);border-radius:20px;padding:26px 28px;margin:0 0 56px;background:rgba(243,239,230,.04)}
+.now p{font-size:18px;line-height:1.5;letter-spacing:0}.now .dim{font-size:16px;margin-top:10px}.now>div+div{margin-top:12px}
+.p{grid-template-columns:200px minmax(0,1fr);padding:26px 0;border-top:1px solid var(--hair)}
+.p h3{font-size:clamp(20px,2vw,26px);letter-spacing:-.02em;font-weight:700;margin-bottom:8px}.p p{font-size:16.5px}
+.how{font-size:clamp(22px,2.6vw,34px);line-height:1.3;max-width:42ch;font-weight:500;letter-spacing:-.02em}
+.sigbg{margin:0 var(--gx) 24px;border-radius:28px;padding:72px 48px 36px;border-top:0}
+.sigbg .big{font-size:clamp(44px,7vw,96px)}
+@media(max-width:700px){.ev,.sigbg{margin-left:16px;margin-right:16px;padding:40px 22px;border-radius:22px}.p{grid-template-columns:minmax(0,1fr);gap:6px}.blk{padding-top:72px;padding-bottom:72px}}
+.wh{padding:0}
 </style>
 </head>
 <body class="lock">
@@ -313,7 +347,7 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 
 <main id="main">
 <section id="manifesto" class="blk paper" aria-label="About">
-<p class="mono lbl">( About )</p>
+<p class="mono lbl">About</p>
 <p id="mf" class="mf" data-t="I'm a computer science student who builds *backend systems* and *AI products*. I ship things people can click, then learn how each part works. *Real-time streaming.* Payment recovery a human approves. Hardware that talks to models."></p>
 <div class="stats">
 <div class="rv"><b data-n="100" data-s="+">0</b><span>students led through a STEM-career awareness project</span></div>
@@ -321,10 +355,10 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 <div class="rv"><b data-n="5">0</b><span>projects built: an AI workspace, a payments engine, a RAG pipeline, an agent gate and an expense tracker, each with tests</span></div>
 </div></section>
 
-<section id="work" class="work" aria-label="Selected work"><div class="pin"><div class="wh"><p class="mono lbl" style="margin-bottom:12px;color:var(--dim)">( Selected work )</p><h2>Work</h2></div><div class="track" id="track"></div></div></section>
+<section id="work" class="work" aria-label="Selected work"><div class="pin"><div class="wh"><p class="mono lbl" style="margin-bottom:12px;color:var(--dim)">Selected work</p><h2>Work</h2></div><div class="track" id="track"></div></div></section>
 
 <section id="evidence" class="ev" aria-labelledby="ev-h">
-<p class="mono lbl" style="color:var(--pd)">( Evidence )</p>
+<p class="mono lbl" style="color:var(--pd)">Evidence</p>
 <h2 id="ev-h">Measured, not claimed.</h2>
 <p class="sub">Each project started from a test set. These are the real numbers, with the catch next to each one. I wrote every test set myself, so they show a design choice paid off, not how it would score in the wild.</p>
 <div class="evg">
@@ -348,7 +382,7 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 </div></section>
 
 <section id="sandbox" class="blk sbx" aria-labelledby="sb-h">
-<p class="mono lbl" style="color:var(--dim)">( Try it )</p>
+<p class="mono lbl" style="color:var(--dim)">Try it</p>
 <h2 class="sbt" id="sb-h">Try to break the gate.</h2>
 <p class="sbs">This is AgentGate's real policy engine and argument checks, copied from the repo and running in your browser against a simulated workspace. Nothing is executed. The challenge: get ₹15,000 of refunds through without a human.</p>
 <div class="sbg">
@@ -378,7 +412,7 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 </section>
 
 <section id="toolkit" class="blk bluebg" aria-labelledby="tk-h">
-<p class="mono lbl">( Toolkit )</p><h2 class="big rv" id="tk-h">Toolkit</h2>
+<p class="mono lbl">Toolkit</p><h2 class="big rv" id="tk-h">Toolkit</h2>
 <div class="tg rv">
 <div><h3>Languages</h3><p class="chips"><span>JavaScript</span><span>Python</span><span>C++</span></p></div>
 <div><h3>Frontend</h3><p class="chips"><span>React</span><span>HTML</span><span>CSS</span></p></div>
@@ -389,7 +423,7 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 </div></section>
 
 <section id="path" class="blk dk" aria-labelledby="pa-h">
-<p class="mono lbl" style="color:var(--dim)">( Path )</p>
+<p class="mono lbl" style="color:var(--dim)">Path</p>
 <div class="now rv"><div><p class="mono" style="color:var(--sig)">NOW IMPROVING</p><p>RecoverFlow, DocuMind and AgentGate</p></div><div><p>RecoverFlow, DocuMind and AgentGate are live. AgentGate's site and playground run the real policy engine; its approval dashboard still needs a server I have not hosted.</p><p class="dim">Next: host the dashboard, record demo videos, and run the model-based evaluations.</p></div></div>
 <h2 class="big rv" id="pa-h">Path</h2>
 <div class="p rv"><span class="mono">2025 – 2029</span><div><h3>B.Tech, CS (AI/ML)</h3><p>NxtWave Institute of Advanced Technologies (NIAT). Foundations in C++, Python, data structures and algorithms, and machine learning. SGPA: 9.52 (Semester 3).</p></div></div>
@@ -399,11 +433,11 @@ nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;
 <div class="p rv"><span class="mono">Apr – Jul 2024</span><div><h3>Airbac Labs · Student Intern</h3><p>Learned Python and machine learning and applied them to practical projects, including stock-market prediction models.</p></div></div>
 </section>
 
-<section class="blk paper" aria-labelledby="hw-h"><p class="mono lbl">( How I build )</p><h2 class="sr" id="hw-h" style="position:absolute;width:1px;height:1px;overflow:hidden">How I build</h2>
+<section class="blk paper" aria-labelledby="hw-h"><p class="mono lbl">How I build</p><h2 class="sr" id="hw-h" style="position:absolute;width:1px;height:1px;overflow:hidden">How I build</h2>
 <p class="how rv">I build with AI coding tools like a fast junior engineer: I write the spec, <em>review every change</em> and own the decisions. Then I read the code, run the tests and trace the key flows until I can explain how each part works.</p></section>
 
 <section id="contact" class="blk sigbg" aria-labelledby="ct-h">
-<p class="mono lbl">( Contact )</p><h2 class="sr" id="ct-h" style="position:absolute;width:1px;height:1px;overflow:hidden">Contact</h2>
+<p class="mono lbl">Contact</p><h2 class="sr" id="ct-h" style="position:absolute;width:1px;height:1px;overflow:hidden">Contact</h2>
 <a class="big" href="mailto:upparikarthik505@gmail.com" data-cur="Email">Let's talk.</a>
 <div class="btnr"><button id="cpe" aria-live="polite">Copy email</button><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a></div>
 <p class="mono" style="margin:60px 0 0">upparikarthik505@gmail.com · Hyderabad, India</p>
@@ -431,6 +465,7 @@ const CASE=[
  {sum:'Question answering over the Express 5 docs, built evaluation-first: the 50-question test set and the metrics came before the pipeline, so each design choice is measured.',bul:['Section-aware chunking, stemmed BM25, a local LSA index fused with RRF, and a reranker. At the same context size, heading-based chunks beat fixed windows (recall@1 65.7% vs 51.4%).','Best local pipeline: recall@1 71.4%, recall@3 85.7%, recall@5 91.4% on 35 answerable questions I wrote myself. Differences of one or two questions are noise.','Extractive mode refused all 15 unanswerable questions (0 false answers) but answered only 29% of answerable ones correctly. Safe and conservative, not smart, and the README says so.','Two paraphrase questions are missed by every local method. Gemini embeddings and LLM answers are written and tested against mocks, with their numbers marked pending until run with a key.','Streaming chat UI over SSE, request limits and CSP. You can also index your own documents in memory and ask them the same way. 25 tests, including gates that fail if an unanswerable question is ever answered.'],stack:'Node 22 · BM25 · LSA · RRF · SSE · Evaluation harness',flows:[{t:'A question',s:['Question arrives','Stemmed BM25 and LSA each rank passages','RRF fuses the rankings','Reranker orders the top passages','Answer is the best-matching sentence, with citation','Or a refusal if coverage is too low']}],demo:'https://documind-opal-alpha.vercel.app',repo:'https://github.com/karthik1122-code/documind'},
  {sum:'A policy gate and approval runtime for AI agent tool calls. The agents are scripted and the world is simulated; the gate is the product.',bul:['Canonicalises each call before judging it (decodes paths, folds case), so the policy judges exactly what runs. Default deny.','Approval is bound to the hash of one exact call, needs a different person than the actor, expires, and is re-checked against policy at execution.','Event-sourced runs in a hash-chained log with optimistic concurrency, so a run can resume after a restart and executes effectively once.','Adversarial suite of 56 cases: 44 attacks (37 denied, 7 held for a human, 0 executed) and 12 legitimate calls (0 wrongly denied). I wrote both the policy and the attacks.','Per-user accounts with viewer, approver and admin roles: the approver in the log is the signed-in user, not a name the browser sends. 70 tests, and 15 hand-applied bugs were each caught by at least one test. No LLM planner yet, so nothing here measures a real model’s injection resistance.'],stack:'Node 22 · Policy engine · Event sourcing · Postgres · Hash chain',flows:[{t:'A tool call',s:['Agent proposes a call','Canonicalise and compute facts','Policy: allow, approve or deny','Human approves that exact call hash','Policy re-checked, executed once','Every step sealed in the chain']}],demo:'https://agentgate-lake.vercel.app',repo:'https://github.com/karthik1122-code/agentgate'},
  {sum:'A small expense tracker with accounts, monthly budgets and a six-month chart, built to be explained end to end: every route, query and test is something I can walk through.',bul:['React dashboard with a monthly total, change versus last month, budget bar, six-month chart and category breakdown, plus a landing page.','Search runs on the server across all months with a debounced input, and results are paged (page and limit, capped at 50).','Sign-up and login with bcrypt-hashed passwords and a JWT in an httpOnly cookie. Failed logins are rate limited (5 per 15 minutes per IP and email) and responses carry security headers.','Every query is scoped to the logged-in user. Undo restores a deleted expense with its original date, and CSV export neutralises spreadsheet formulas.','13 automated tests run against an app factory that takes injected models, so the API is tested without a database.'],stack:'React 19 · Vite · Express 5 · Mongoose · MongoDB Atlas · JWT · Render',flows:[{t:'Log in',s:['POST /api/login','Rate limiter checks failures','bcrypt compare','JWT set in an httpOnly cookie','Every later request is scoped to that user']},{t:'Monthly summary',s:['GET /api/summary?month','Query only that user, that month','Totals, categories, daily average','Six-month history','React redraws the cards and chart']}],repo:'https://github.com/karthik1122-code/spendlog',demo:'https://spendlog-e525.onrender.com'}];
+const MET=['Autosave with keep-mine / load-theirs conflict handling','47-case regression suite: 97.9%, 0 unsafe actions','recall@1 65.7% vs 51.4%, 15 of 15 refusals','44 attacks: 37 denied, 7 held, 0 executed','13 automated tests, rate-limited login'];
 const SLUG=['cognispace','recoverflow','documind','agentgate','spendlog'];
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 let tx=innerWidth*.6,ty=innerHeight*.4,cx0=tx,cy0=ty;
@@ -440,7 +475,7 @@ const L=[];$$('.hn').forEach(el=>{const t=el.textContent;el.textContent='';[...t
 $('#mq').innerHTML=Array(4).fill('<span>Backend</span><span class="it">AI systems</span><span>Real-time</span><span class="it">Shipping</span>').join('');
 $('#mf').innerHTML=$('#mf').dataset.t.replace(/\*([^*]+)\*/g,(m,a)=>a.split(' ').map(x=>'\u0001'+x).join(' ')).split(' ').map(w=>w.startsWith('\u0001')?'<em class="w">'+w.slice(1)+'</em>':'<span class="w">'+w+'</span>').join(' ');
 const W=$$('.mf .w');
-$('#track').innerHTML=PRJ.map((p,i)=>`<a class="card" href="#/work/${SLUG[i]}" data-i="${i}" data-cur="View" aria-label="View the ${p[0]} case study"><span class="idx mono">0${i+1}</span><div class="art a${i}"><img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" loading="lazy" width="1100" height="688">${LIVE[i]?`<span class="live mono"><i></i>Live</span>`:''}</div><h3>${p[0]}</h3><p>${p[1]}</p><span class="stk mono">${CASE[i].stack}</span><span class="chip mono">${p[2]}</span></a>`).join('');
+$('#track').innerHTML=PRJ.map((p,i)=>`<a class="card" href="#/work/${SLUG[i]}" data-i="${i}" data-cur="View" aria-label="View the ${p[0]} case study"><span class="idx mono">0${i+1}</span><div class="art a${i}"><img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" loading="lazy" width="1100" height="688">${LIVE[i]?`<span class="live mono"><i></i>Live</span>`:''}</div><h3>${p[0]}</h3><p>${p[1]}</p><span class="met mono">${MET[i]}</span><span class="stk mono">${CASE[i].stack}</span><span class="chip mono">${p[2]}</span></a>`).join('');
 $$('.card').forEach(c=>c.onclick=e=>{e.preventDefault();openCase(+c.dataset.i)});
 /* kinetic type: always-on variable-weight wave (no pointer needed, so it shows on touch screens too) */
 const VT=[];{const c=$('#contact .big');if(c){const t=c.textContent;c.setAttribute('aria-label',t);c.textContent='';[...t].forEach(ch=>{const s=document.createElement('span');s.setAttribute('aria-hidden','true');s.className='vt';s.textContent=ch===' '?'\u00a0':ch;c.appendChild(s);VT.push(s)})}}
