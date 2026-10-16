@@ -2,6 +2,8 @@
 
 ![Portfolio preview](og.png)
 
+Live site: **https://karthikuppari.vercel.app**
+
 Personal portfolio of **Karthik Uppari**, a B.Tech CS (AI/ML) student at NIAT, Hyderabad, building backend systems and AI products. Open to software engineering internships.
 
 ## What's inside
