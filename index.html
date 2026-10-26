@@ -246,7 +246,6 @@ body{--g:0}
 @media(prefers-reduced-motion:reduce){.rv{clip-path:none;transform:none}#wipe{display:none}.an path{animation:none}.art canvas.dist{display:none}}
 
 body.lock{overflow:hidden}
-#pre,#wipe{display:block}
 
 /* ---------- v4: product polish ---------- */
 nav{mix-blend-mode:normal;color:var(--bone);background:rgba(7,8,13,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:calc(14px + env(safe-area-inset-top,0));padding-bottom:14px}
@@ -332,9 +331,6 @@ nav{padding-left:var(--gx);padding-right:var(--gx)}
 .lp{background:#08090c;border-color:#23252f}
 @media(prefers-reduced-motion:reduce){.tl.fp{animation:none}}
 
-/* wow hero: glass status board floats over the liquid metal */
-.hero>.lp{position:relative;margin-top:28px;max-width:560px;background:rgba(8,9,12,.62);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
-@media(min-width:1100px){.hero>.lp{position:absolute;right:24px;bottom:92px;width:430px;margin:0;z-index:3}}
 
 .hm1{left:var(--gx)}.hm2{right:var(--gx)}
 .hero{padding-bottom:36px}
@@ -357,6 +353,24 @@ body::after{content:'';position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .dk{background:radial-gradient(800px 420px at 0 0,rgba(43,59,255,.22),transparent 60%),radial-gradient(700px 400px at 100% 100%,rgba(255,90,31,.12),transparent 60%),var(--ink)}
 .sigbg .big{font-size:clamp(64px,13vw,220px)!important;letter-spacing:-.07em;line-height:.85}
 @media(prefers-reduced-motion:reduce){.p,.tg>div{transition:none}}
+
+/* hero v6: editorial composition, name in front of the metal */
+h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.35)}
+@media(min-width:821px){
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto auto auto;align-content:end;column-gap:48px;height:100svh;min-height:720px;padding:120px var(--gx) 44px;justify-content:stretch}
+.hero h1{grid-column:1/-1;grid-row:2;margin:0 0 36px;font-size:clamp(110px,16.8vw,300px);line-height:.8;letter-spacing:-.07em}
+.hero .hn+.hn{padding-left:1.05em}
+.hero .hs{grid-column:1;grid-row:3;margin:0;max-width:24ch;font-size:clamp(24px,2.3vw,36px);line-height:1.1}
+.hero .hq{grid-column:1;grid-row:4;margin:16px 0 0;max-width:52ch}
+.hero .hp{grid-column:2;grid-row:3/5;align-self:end;justify-self:end;justify-content:flex-end;margin:0;flex-wrap:nowrap}
+.hero .scrl{display:none}
+.hm1,.hm2{top:104px}
+}
+/* live board now lives in About, dark panel on paper */
+#manifesto .lp{margin-top:64px;max-width:none;background:#0b0c11;color:var(--bone);border-color:#1f2230;box-shadow:0 40px 80px -40px rgba(7,8,13,.45);padding:26px 28px 20px}
+#manifesto .lp .mono,#manifesto .lp small,#manifesto .lp .lpf{color:rgba(243,239,230,.72)}
+#manifesto .lph h2{color:var(--bone);font-size:14px}
+.hp a{white-space:nowrap}
 </style>
 </head>
 <body class="lock">
@@ -374,8 +388,7 @@ body::after{content:'';position:fixed;inset:0;z-index:60;pointer-events:none;opa
 <h1 aria-label="Karthik Uppari"><span class="hn" aria-hidden="true">Karthik</span><span class="hn" aria-hidden="true">Uppari</span></h1>
 <p class="hs fu" style="--fd:1s">I build <em>full-stack products</em> with <em>AI inside</em> that people can actually use.</p>
 <p class="mono hq fu" style="--fd:1.15s">Three deployed full-stack projects, plus two more. Every number on this page is measured, with its catch next to it.</p>
-<p class="hp fu" style="--fd:1.25s"><a class="pri" href="#work">View projects</a><a href="assets/Karthik_Uppari_Resume.pdf" download>Download résumé</a><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a></p>
-<aside class="lp fu" style="--fd:1.4s" aria-labelledby="lp-h"><div class="lph"><h2 id="lp-h" class="mono"><i class="dot" aria-hidden="true"></i>Live right now</h2><span class="mono" id="lp-s">checking…</span></div><ul id="lp-l"></ul><p class="lpf mono">Each project is deployed. Round-trip times are measured from your browser, just now. Free hosting can take up to 30 s to wake.</p></aside>
+<p class="hp fu" style="--fd:1.25s"><a class="pri" href="#work">View projects</a><a href="assets/Karthik_Uppari_Resume.pdf" download>Download résumé</a><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a></p>
 <a class="scrl mono fu" style="--fd:1.3s" href="#manifesto">Scroll ↓</a>
 </header>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
@@ -388,7 +401,8 @@ body::after{content:'';position:fixed;inset:0;z-index:60;pointer-events:none;opa
 <div class="rv"><b data-n="100" data-s="+">0</b><span>students led through a STEM-career awareness project</span></div>
 <div class="rv"><b data-n="2">0</b><span>internships and traineeships: IoT and robotics, machine learning</span></div>
 <div class="rv"><b data-n="3">0</b><span>featured projects, all deployed: an expense tracker, an AI workspace and a payments recovery engine. Two more are listed under Also built</span></div>
-</div></section>
+</div>
+<aside class="lp rv" aria-labelledby="lp-h"><div class="lph"><h2 id="lp-h" class="mono"><i class="dot" aria-hidden="true"></i>Live right now</h2><span class="mono" id="lp-s">checking…</span></div><ul id="lp-l"></ul><p class="lpf mono">Each project is deployed. Round-trip times are measured from your browser, just now. Free hosting can take up to 30 s to wake.</p></aside></section>
 
 <section id="work" class="work" aria-label="Selected work"><div class="pin"><div class="wh"><p class="mono lbl" style="margin-bottom:12px;color:var(--dim)">Selected work</p><h2>Work</h2></div><div class="track" id="track"></div></div></section>
 
