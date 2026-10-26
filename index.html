@@ -463,6 +463,13 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 .sigbg{margin:-40px 0 0!important}
 .tg .chips span{display:inline-block;white-space:nowrap}
 @media(max-width:760px){.tg>div{grid-template-columns:minmax(0,1fr)}}
+
+/* steady typography: one weight per role, no pulsing */
+h1,h1 .l,.hn{font-variation-settings:normal!important;font-weight:800}
+h2.big,.wh h2,.sbt,#ev-h,#tk-h,#pa-h,.sigbg .big,.sigbg .big *{font-variation-settings:normal!important}
+h1 .l{transform:none!important}
+
+@media(min-width:821px){.track .alsoh{flex:0 0 auto;align-self:stretch;writing-mode:vertical-rl;transform:rotate(180deg);margin:0;padding:0 6px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sig);border-right:1px solid rgba(255,90,31,.45)}}
 </style>
 </head>
 <body class="lock">
@@ -650,8 +657,7 @@ const HT=$$('h2.big,.wh h2,.sbt,#ev-h');
 let LN=null;if(!RM&&FINE&&typeof Lenis!=='undefined'){try{LN=new Lenis({lerp:.11,wheelMultiplier:.95})}catch(e){LN=null}}
 
 /* cursor + label + letters */
-addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;
- if(RM)return;L.forEach(s=>{const r=s.getBoundingClientRect(),dx=tx-(r.left+r.width/2),dy=ty-(r.top+r.height/2),d=Math.hypot(dx,dy),k=Math.exp(-d/190);s.style.transform=`translateY(${-k*34}px) skewX(${-dx/26*k}deg)`})});
+addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;});
 document.addEventListener('pointerover',e=>{const t=e.target.closest('[data-cur]');const el=$('#curt');if(t){el.textContent=t.dataset.cur;el.classList.add('on')}else el.classList.remove('on')});
 /* link scramble */
 const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%/';
@@ -699,9 +705,9 @@ addEventListener('resize',sizeWork);
  drawGL(now||0);
  if(typeof PEND!=='undefined'&&PEND.length){const vh=innerHeight*.9;for(let i=PEND.length-1;i>=0;i--){const t=PEND[i],r=t.getBoundingClientRect();if(r.top<vh&&r.bottom>0){PEND.splice(i,1);showEl(t)}}}
  if(!RM){const T=(now||0)/1000;
-  if(heroVis)L.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(560+240*Math.sin(T*1.7-i*.62))}`);
-  const cr=$('#contact').getBoundingClientRect();if(cr.top<innerHeight&&cr.bottom>0)VT.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(540+260*Math.sin(T*2-i*.7))}`);
-  HT.forEach(h=>{const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const k=clamp(1-(r.top+r.height/2)/innerHeight,0,1);h.style.fontVariationSettings=`'wght' ${Math.round(300+500*Math.sin(k*Math.PI))}`})}
+ /* steady type: no weight pulsing */
+
+}
 
  $('#bar').style.transform=`scaleX(${clamp(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight),0,1)})`;
  const dy=scrollY-lastY;lastY=scrollY;vel+=(dy-vel)*.1;skew+=(clamp(vel*.45,-10,10)-skew)*.15;
@@ -712,7 +718,7 @@ addEventListener('resize',sizeWork);
 Promise.all([document.fonts?document.fonts.ready:0]).then(sizeWork);sizeWork();
 
 /* card tilt + spotlight, magnetic controls, focus handling */
-$$('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(RM||!FINE)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--rx',((.5-y)*7).toFixed(2)+'deg');c.style.setProperty('--ry',((x-.5)*9).toFixed(2)+'deg');c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
+$$('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(RM||!FINE)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--rx',((.5-y)*3).toFixed(2)+'deg');c.style.setProperty('--ry',((x-.5)*9).toFixed(2)+'deg');c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
  c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
  c.addEventListener('focus',()=>{if(!maxX)return;const p=clamp((c.offsetLeft-24)/maxX,0,1);scrollTo({top:wk.offsetTop+p*(wk.offsetHeight-innerHeight),behavior:'auto'})})});
 $('.pin').addEventListener('scroll',e=>{e.target.scrollLeft=0});
@@ -825,8 +831,8 @@ document.addEventListener('pointerover',e=>{$('#cur').classList.toggle('hov',!!e
   return{set(x,y,on){S.mx=x;S.my=y;S.th=on?1:0;if(on&&ok)c.classList.add('on');if(!S.run&&(on||S.h>.01)){S.run=true;requestAnimationFrame(frame)}}}}
  $$('.card').forEach(card=>{const art=card.querySelector('.art');let D;const mv=e=>{if(D===undefined)D=make(art);if(!D)return;const r=art.getBoundingClientRect();const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;D.set(clamp(x,0,1),clamp(y,0,1),x>=-.1&&x<=1.1&&y>=-.1&&y<=1.1)};
   art.addEventListener('pointermove',mv);art.addEventListener('pointerenter',mv);art.addEventListener('pointerleave',()=>{if(D)D.set(.5,.5,false)})})})();
-/* hero letters get lighter near the cursor (variable font weight) */
-addEventListener('pointermove',e=>{if(RM||!FINE)return;L.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2)),k=Math.exp(-d/240);s.style.fontVariationSettings=`'wght' ${Math.round(800-560*k)}`})});
+
+
 document.documentElement.addEventListener('pointerleave',()=>{L.forEach(s=>s.style.fontVariationSettings='')});
 
 function route0(){const m=location.hash.match(/^#\/work\/([a-z]+)/),i=m?SLUG.indexOf(m[1]):-1;if(i>=0)showCase(i)}
