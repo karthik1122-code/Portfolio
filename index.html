@@ -421,6 +421,7 @@ h1 .l{transform:none!important}
 @media(prefers-reduced-motion:reduce){.wm>span{transform:none!important}}
 .tg{margin-top:24px!important}
 .hero .hs{max-width:30ch!important}
+.art video.lv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;z-index:1}.art .live{z-index:2}
 </style>
 </head>
 <body class="lock">
@@ -528,7 +529,7 @@ const PRJ=[
  ['SpendLog','A full-stack expense tracker with monthly budgets, a six-month chart, search and CSV export. Small enough to explain end to end.','Live · Full-stack']];
 const LIVE=[1,1,1,1,1];
 /* display order: the three featured projects (matching the résumé), then the two under Also built. Indexes still point into the arrays below. */
-const ORD=[4,0,1,2,3],FEAT=3;
+const ORD=[4,0,1,2,3],FEAT=3;const LOOPV=['cognispace','recoverflow','documind','agentgate',null];
 const CASE=[
  {sum:'A notes, docs and sprint workspace with a block editor and an AI Copilot that edits the page you are on.',bul:['TipTap block editor with a “/” menu, toggles, to-dos and a selection toolbar. Copilot improves or summarizes selected text.','Gemini responses stream to the page over SSE. You review before inserting, can stop mid-stream, and can undo an insert.','Autosave only says “Saved” once the server confirms. Offline edits retry with backoff, and a version check offers “keep mine” or “load theirs” on conflict.','Version history with one-click restore, undo for deletes, a ⌘K command palette and a drag-and-drop sprint board.','Express 5 and MongoDB Atlas, JWT in an httpOnly cookie, rate limits and sanitized AI output. No real-time multiplayer yet.'],stack:'React 19 · TypeScript · TipTap · Framer Motion · Express 5 · MongoDB · Gemini · SSE',flows:[{t:'Autosave',s:['Editor change','Merge pending edits per page','PATCH with baseVersion','409 on mismatch: keep mine or load theirs','Saved only after the server confirms']},{t:'Copilot',s:['Selected text or prompt','POST /api/ai/transform','Gemini tokens stream back over SSE','Review panel (Stop available)','Insert, with undo']}],repo:'https://github.com/karthik1122-code/cognispace',demo:'https://cognispace-sigma.vercel.app'},
  {sum:'Policy-first AI revenue recovery for failed Razorpay payments, built to the Razorpay AI Buildathon brief (Track 03). I built it for practice and did not enter the buildathon.',bul:['The AI proposes a diagnosis, a deterministic policy layer decides what is allowed, and a human approves one bounded action. No automatic charge, refund or retry.','Policy codes: NO_CONSENT, HIGH_VALUE_REVIEW, EXCEPTION_QUEUE, LOW_CONFIDENCE, HUMAN_GATE.','Verifies X-Razorpay-Signature HMACs, rejects forged webhooks and processes each event once.','Hash-chained audit log that visibly breaks if history is edited, plus consent-safe English and Hinglish message drafts.','Postgres store: the idempotency key, event and audit record commit in one transaction, tested with 200 simultaneous deliveries producing one record. 47-case hard evaluation set: 72.3% to 97.9% after fixing what it found, 0 unsafe actions (measured on the cases used to fix the rules, so a regression gate, not live accuracy). 49 tests and CI, plus accounts with viewer, approver and admin roles. Demo data is synthetic and Razorpay is Test Mode only.'],stack:'Node 22 · HMAC webhooks · Policy engine · Hash-chained audit log',flows:[{t:'A failed payment',s:['Razorpay webhook arrives','Verify the signature (forged = 401)','Diagnose the cause with evidence','Policy decides: allow, hold or review','Human approves one bounded action','Decision sealed in the audit chain']}],repo:'https://github.com/karthik1122-code/recoverflow',demo:'https://recoverflow-0qjg.onrender.com'},
@@ -545,7 +546,7 @@ const L=[];$$('.hn').forEach(el=>{const t=el.textContent;el.textContent='';[...t
 $('#mq').innerHTML=Array(4).fill('<span>Full-stack</span><span class="it">AI inside</span><span>Deployed</span><span class="it">Measured</span>').join('');
 $('#mf').innerHTML=$('#mf').dataset.t.replace(/\*([^*]+)\*/g,(m,a)=>a.split(' ').map(x=>'\u0001'+x).join(' ')).split(' ').map(w=>w.startsWith('\u0001')?'<em class="w">'+w.slice(1)+'</em>':'<span class="w">'+w+'</span>').join(' ');
 const W=$$('.mf .w');
-$('#track').innerHTML=ORD.map((i,pos)=>{const p=PRJ[i];return (pos===FEAT?`<h3 class="alsoh mono">Also built</h3>`:'')+`<a class="card" href="#/work/${SLUG[i]}" data-i="${i}" data-cur="View" aria-label="View the ${p[0]} case study"><span class="idx mono">0${pos+1}</span><div class="art a${i}"><img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" loading="lazy" width="1100" height="688">${LIVE[i]?`<span class="live mono"><i></i>Live</span>`:''}</div><h3>${p[0]}</h3><p>${p[1]}</p><span class="met mono">${MET[i]}</span><span class="stk mono">${CASE[i].stack}</span><span class="chip mono">${p[2]}</span></a>`}).join('');
+$('#track').innerHTML=ORD.map((i,pos)=>{const p=PRJ[i];return (pos===FEAT?`<h3 class="alsoh mono">Also built</h3>`:'')+`<a class="card" href="#/work/${SLUG[i]}" data-i="${i}" data-cur="View" aria-label="View the ${p[0]} case study"><span class="idx mono">0${pos+1}</span><div class="art a${i}"><img src="assets/p${i}.webp" alt="Screenshot of ${p[0]}" loading="lazy" width="1100" height="688">${LOOPV[i]&&!RM?`<video class="lv" muted loop playsinline preload="none" poster="assets/loop-${LOOPV[i]}.webp" aria-hidden="true" tabindex="-1"><source src="assets/loop-${LOOPV[i]}.webm" type="video/webm"><source src="assets/loop-${LOOPV[i]}.mp4" type="video/mp4"></video>`:''}${LIVE[i]?`<span class="live mono"><i></i>Live</span>`:''}</div><h3>${p[0]}</h3><p>${p[1]}</p><span class="met mono">${MET[i]}</span><span class="stk mono">${CASE[i].stack}</span><span class="chip mono">${p[2]}</span></a>`}).join('');
 $$('.card').forEach(c=>c.onclick=e=>{e.preventDefault();openCase(+c.dataset.i)});
 
 /* work: cards / index toggle with hover preview */
@@ -818,5 +819,7 @@ addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=='
   if(!RMx&&innerWidth>820)secs.forEach(e=>{const t=e.getBoundingClientRect().top,p=Math.min(1,Math.max(0,(innerHeight-t)/(innerHeight*.55))),x=((1-p)*4).toFixed(2);e.style.clipPath=p>=1?'':`inset(0 ${x}vw 0 ${x}vw round 40px 40px 0 0)`});
   requestAnimationFrame(f)}
  requestAnimationFrame(f)})();</script>
+<script>(function(){const vs=[...document.querySelectorAll('video.lv')];if(!vs.length||!('IntersectionObserver' in window))return;
+ const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload==='none'){v.preload='auto';v.load()}v.play().catch(()=>{})}else v.pause()}),{threshold:.25});vs.forEach(v=>io.observe(v))})();</script>
 </body>
 </html>
