@@ -47,7 +47,7 @@
 </style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Karthik Uppari","url":"https://karthik1122-code.github.io/","jobTitle":"Software engineering intern candidate","email":"upparikarthik505@gmail.com","sameAs":["https://github.com/karthik1122-code","https://linkedin.com/in/karthik-uppari-4005a7373"],"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#07080D;--paper:#EDE9DF;--sig:#FF5A1F;--blue:#2B3BFF;--bone:#F3EFE6;--dim:rgba(243,239,230,.82);--pd:rgba(7,8,13,.74);--line:rgba(243,239,230,.24);box-sizing:border-box}
 *,*::before,*::after{box-sizing:inherit}
@@ -57,7 +57,7 @@ body.lock{overflow:hidden}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .mono{font:500 13px/1.4 'DM Mono',ui-monospace,monospace;letter-spacing:.02em}
-.it,em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400}
+.it,em{font-style:normal}
 .skip{position:absolute;left:-999px;top:8px;background:var(--bone);color:var(--ink);padding:12px 18px;z-index:200;border-radius:8px}.skip:focus{left:12px}
 @media(pointer:fine){body,a,button{cursor:none}}
 #cur{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:150}
@@ -69,7 +69,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:calc(16px + env(safe-area-inset-top,0)) 24px 16px;mix-blend-mode:difference;color:#fff}
 .logo{font-weight:800;font-size:20px;letter-spacing:-.04em}.nv{display:flex;gap:6px;align-items:center}.nv a{padding:12px 14px;min-height:44px;display:inline-flex;align-items:center}
 .k{border:1px solid currentColor;border-radius:8px;padding:10px 14px;min-height:44px}
-.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 28px}
+.hero{position:relative;height:100svh;min-height:600px;overflow:visible;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 28px}
 #gl{position:absolute;inset:0;width:100%;height:100%}
 .hm1,.hm2{position:absolute;top:92px;margin:0;color:var(--bone)}.hm1{left:24px}.hm2{right:24px;display:flex;gap:10px;align-items:center}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--sig);animation:pl 2s infinite}@keyframes pl{70%{box-shadow:0 0 0 12px transparent}0%{box-shadow:0 0 0 0 var(--sig)}}
@@ -220,29 +220,6 @@ body{--g:0}
 .nx{display:block;margin-top:90px;border-top:1px solid var(--line);padding:36px 0 10px;font-size:clamp(44px,9vw,140px);font-weight:800;letter-spacing:-.055em;line-height:.9}.nx:hover{color:var(--sig)}
 .nx small{display:block;margin-bottom:14px;color:var(--dim);font-weight:500;letter-spacing:0}
 .art canvas.dist{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .35s;pointer-events:none}.art canvas.dist.on{opacity:1}
-/* sandbox */
-.sbx{background:var(--ink);padding-bottom:140px}
-.sbt{margin:0 0 18px;font-size:clamp(48px,9vw,140px);line-height:.9;font-weight:800;letter-spacing:-.055em;max-width:12ch}
-.sbs{max-width:58ch;color:var(--dim);margin:0 0 48px}
-.sbg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}
-.sbc{border:1px solid var(--line);border-radius:22px;padding:24px;background:rgba(243,239,230,.035);min-width:0}
-.sbc>.mono{display:block;color:var(--dim);margin:0 0 10px}.sbc label.mono{display:block;margin:18px 0 8px;color:var(--dim)}
-.chp{display:flex;flex-wrap:wrap;gap:8px}.chp button{border:1px solid var(--line);border-radius:999px;padding:0 14px;min-height:44px;font-size:15px;transition:background .2s,color .2s}.chp button:hover,.chp button[aria-pressed=true]{background:var(--bone);color:var(--ink)}
-.sbc select,.sbc textarea{width:100%;background:rgba(7,8,13,.7);color:var(--bone);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:500 14px/1.5 'DM Mono',ui-monospace,monospace;resize:vertical}
-.sbc select{min-height:44px}
-.sbb{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.sbbtn{border:1.5px solid var(--bone);border-radius:999px;padding:0 22px;min-height:46px;font-weight:700;transition:background .2s,color .2s}.sbbtn:hover{background:var(--bone);color:var(--ink)}.sbbtn.pri{background:var(--sig);border-color:var(--sig);color:var(--ink)}.sbbtn.pri:hover{background:var(--bone);border-color:var(--bone)}
-#sb-state{margin:16px 0 0;color:var(--dim)}
-.vd{display:inline-block;border-radius:12px;padding:10px 16px;font-weight:800;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.03em}
-.v-allow{background:#34d399;color:#04140d}.v-hold{background:var(--sig);color:var(--ink)}.v-deny{background:#ff6b6b;color:#1a0505}.v-rej{border:2px dashed var(--bone)}
-.rs{margin:18px 0 0;display:grid;gap:14px}.rs dt{color:var(--dim);margin:0}.rs dd{margin:4px 0 0}.rs pre{margin:0;white-space:pre-wrap;word-break:break-word;font:500 13px/1.5 'DM Mono',ui-monospace,monospace;background:rgba(7,8,13,.7);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-.rs .rl{display:flex;flex-wrap:wrap;gap:6px}.rs .rl span{border:1px solid var(--line);border-radius:999px;padding:4px 12px}
-.idle{color:var(--dim);margin:0}
-.bnr{margin:18px 0 0;padding:14px 16px;border-radius:12px;border:2px solid #34d399}
-.sbc details{margin-top:6px}.sbc summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
-#sb-perr{color:#ff9d9d;margin:8px 0 0}
-#sb-log{list-style:none;margin:0;padding:0;display:grid;gap:6px}#sb-log li{display:flex;gap:10px;align-items:baseline;font-size:15px;border-top:1px solid var(--line);padding-top:8px}#sb-log b{flex:none;min-width:74px}
-@media(max-width:900px){.sbg{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.rv{clip-path:none;transform:none}#wipe{display:none}.an path{animation:none}.art canvas.dist{display:none}}
 
 body.lock{overflow:hidden}
@@ -250,22 +227,11 @@ body.lock{overflow:hidden}
 /* ---------- v4: product polish ---------- */
 nav{mix-blend-mode:normal;color:var(--bone);background:rgba(7,8,13,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:calc(14px + env(safe-area-inset-top,0));padding-bottom:14px}
 nav .nv a.sc{position:relative}nav .nv a.sc::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--sig);transform:scaleX(0);transition:transform .25s}nav .nv a.sc.act::after{transform:scaleX(1)}
-.lp{background:linear-gradient(180deg,rgba(243,239,230,.07),rgba(243,239,230,.025));border:1px solid var(--line);border-radius:20px;padding:20px 20px 16px;box-shadow:0 40px 90px -50px rgba(63,70,255,.55);margin-top:36px;width:100%}
-.lph{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.lph h2{margin:0;font-size:13px;font-weight:500;display:flex;gap:10px;align-items:center;letter-spacing:.02em;color:var(--bone)}.lph span{color:var(--dim);font-size:12px}
-#lp-l{list-style:none;margin:0;padding:0}
-#lp-l a{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:13px 4px;border-bottom:1px solid var(--line);color:var(--bone);text-decoration:none;transition:background .2s}
-#lp-l li:last-child a{border-bottom:0}#lp-l a:hover{background:rgba(243,239,230,.05)}
-#lp-l b{display:block;font-size:17px;letter-spacing:-.02em;font-weight:600}#lp-l small{display:block;color:var(--dim);font-size:12.5px;font-family:'DM Mono',monospace}
 .st{display:inline-flex;gap:7px;align-items:center;font:500 12px 'DM Mono',monospace;color:var(--dim)}.st i{width:8px;height:8px;border-radius:50%;background:var(--dim)}
 .st.ok{color:#34d399}.st.ok i{background:#34d399}.st.slow{color:#fbbf24}.st.slow i{background:#fbbf24;animation:pl 1.4s infinite}.st.bad{color:#f87171}.st.bad i{background:#f87171}
-#lp-l .ms{font:400 12px 'DM Mono',monospace;color:var(--dim);min-width:52px;text-align:right}
-.lpsep{padding:12px 4px 2px;color:var(--dim);font-size:11px;letter-spacing:.06em;text-transform:uppercase;list-style:none}
 .alsoh{grid-column:1/-1;margin:28px 0 -4px;color:var(--dim);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
-.lpf{margin:12px 0 0;color:var(--dim);font-size:11.5px;line-height:1.5}
 .stk{display:block;margin:2px 0 6px;color:var(--dim);font-size:12px;line-height:1.5}
 .hero{gap:0}
-@media(max-width:979px){.lp{margin-top:40px}}
 .hp a{padding:11px 18px!important;font-size:15px!important;min-height:44px}
 
 /* ---------- v5: one calm canvas, contained panels ---------- */
@@ -286,7 +252,6 @@ nav{padding-left:var(--gx);padding-right:var(--gx)}
 .met{display:block;color:var(--sig);font-size:12.5px;line-height:1.45;margin-top:6px}
 .ev{margin:0 var(--gx);border-radius:28px;padding:72px 48px}
 .ev .lbl{color:var(--pd)!important}
-.sbx{padding-bottom:104px}
 
 .tg{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:36px}
 .tg>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:linear-gradient(180deg,rgba(43,59,255,.16),rgba(43,59,255,.04))}
@@ -321,15 +286,6 @@ nav{padding-left:var(--gx);padding-right:var(--gx)}
 @media(prefers-reduced-motion:reduce){.idx2 a,#pv{transition:none}}
 
 /* split-flap departures board */
-.tl{font-style:normal;display:inline-block;min-width:.64em;margin-right:2px;padding:.14em .06em;background:#0d0e13;border:1px solid #1d1f28;border-radius:3px;position:relative;text-align:center;color:#ffb21a;font-family:'DM Mono',monospace;font-weight:500;line-height:1;text-transform:uppercase}
-.tl::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#000;opacity:.8}
-.tl.sp{background:none;border-color:transparent;min-width:.4em}.tl.sp::after{display:none}
-.tl.fp{animation:fpf .09s linear}
-@keyframes fpf{50%{transform:scaleY(.12)}}
-#lp-l b{font-size:15px;letter-spacing:0}
-#lp-l .ms .tl{font-size:12px;color:#7dffb0}
-.lp{background:#08090c;border-color:#23252f}
-@media(prefers-reduced-motion:reduce){.tl.fp{animation:none}}
 
 
 .hm1{left:var(--gx)}.hm2{right:var(--gx)}
@@ -337,8 +293,6 @@ nav{padding-left:var(--gx);padding-right:var(--gx)}
 .mq{padding:18px 0 64px;font-size:clamp(34px,6vw,84px);font-weight:800;letter-spacing:-.04em;line-height:1}
 .work{border-radius:40px 40px 0 0;margin-top:-40px}
 .ev{margin:0;border-radius:40px 40px 0 0;margin-top:-40px;padding:104px var(--gx) 112px}
-.sbx{border-radius:40px 40px 0 0}
-@media(max-width:600px){#lp-l b{white-space:nowrap;font-size:11px}#lp-l b .tl{margin-right:1px;min-width:.58em}#lp-l .ms .tl{font-size:11px;margin-right:1px}}
 
 /* polish: scale, texture, rhythm */
 .wh h2,#tk-h,#pa-h{font-size:clamp(56px,10vw,156px)!important;line-height:.9!important;letter-spacing:-.06em!important;font-weight:800!important}
@@ -367,9 +321,6 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 .hm1,.hm2{top:104px}
 }
 /* live board now lives in About, dark panel on paper */
-#manifesto .lp{margin-top:64px;max-width:none;background:#0b0c11;color:var(--bone);border-color:#1f2230;box-shadow:0 40px 80px -40px rgba(7,8,13,.45);padding:26px 28px 20px}
-#manifesto .lp .mono,#manifesto .lp small,#manifesto .lp .lpf{color:rgba(243,239,230,.72)}
-#manifesto .lph h2{color:var(--bone);font-size:14px}
 .hp a{white-space:nowrap}
 
 /* designer pass */
@@ -408,33 +359,12 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 .wm>span{transform:translateY(105%) rotateX(-80deg);transform-origin:50% 100%;transition:transform 1.1s cubic-bezier(.16,1,.3,1) var(--d,0s)}
 .sp.in .wm>span{transform:none}
 #toolkit{overflow:hidden}
-.cyl{position:absolute;top:96px;right:var(--gx);width:460px;height:300px;perspective:900px;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
-.cyl-in{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(-18deg) rotateX(var(--ang,0deg));will-change:transform}
-.cyl-in span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotateX(calc(var(--i)*-360deg/var(--n))) translateZ(150px);font-weight:800;font-size:48px;line-height:1;letter-spacing:-.04em;white-space:nowrap;color:var(--bone);backface-visibility:hidden;-webkit-backface-visibility:hidden;text-shadow:0 6px 30px rgba(7,8,13,.25)}
-.cyl-in span:nth-child(3n){color:#ffb21a}.cyl-in span:nth-child(4n+1){font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:54px}
-@media(max-width:1000px){.cyl{display:none}}
 .hero h1,.hero .hs,.hero .hq,.hero .hp{will-change:transform,opacity}
 @media(prefers-reduced-motion:reduce){.wm>span{transform:none!important}}
-.hero{perspective:1400px}
 
 /* massive pass */
-.badge{position:absolute;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;color:var(--bone);z-index:4;text-decoration:none}
-.badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 14s linear infinite;overflow:visible}
-.badge text{font:600 13.2px 'DM Mono',monospace;letter-spacing:.18em;fill:currentColor}
-.badge b{width:58px;height:58px;border-radius:50%;background:var(--sig);color:var(--ink);display:grid;place-items:center;font-size:26px;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
-.badge:hover b{transform:scale(1.18) rotate(45deg)}
-.badge:hover svg{animation-duration:5s}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero>.badge{right:var(--gx);top:46%}
-.cbadge{position:absolute;right:var(--gx);top:110px;width:190px;height:190px;color:var(--ink);background:none;border:0;cursor:pointer}
-.cbadge b{background:var(--ink);color:var(--sig);width:74px;height:74px}
 .sigbg{position:relative}
-@media(max-width:820px){.badge{display:none}}
 .mq{padding:14px 0 70px}
-.mq2{margin-top:6px;overflow:hidden}
-#mq2{display:inline-flex;will-change:transform}
-#mq2 span{font-size:clamp(40px,7vw,96px);font-weight:800;letter-spacing:-.04em;line-height:1;padding-right:.45em;color:transparent;-webkit-text-stroke:1.6px var(--ink)}
-#mq2 span.it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
 .card{overflow:hidden}
 .card .idx{position:absolute;right:18px;bottom:-.18em;margin:0;font:800 clamp(150px,17vw,280px)/1 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:1.5px rgba(243,239,230,.16);pointer-events:none;z-index:0;transition:-webkit-text-stroke-color .4s}
 .card:hover .idx{-webkit-text-stroke-color:rgba(255,90,31,.55)}
@@ -451,25 +381,53 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 .rail{position:absolute;left:calc(var(--gx) + 4px);width:1px;background:rgba(243,239,230,.14);pointer-events:none}
 .rail i{display:block;width:100%;height:100%;background:linear-gradient(var(--sig),#ffb21a);transform-origin:50% 0;transform:scaleY(0)}
 @media(max-width:760px){.rail{display:none}}
-@media(prefers-reduced-motion:reduce){.badge svg{animation:none}.rail i{transform:none}}
-.mq>.mq2{display:block}
-.card::before{content:"";grid-column:1/-1;grid-row:1;height:8px}
+@media(prefers-reduced-motion:reduce){.rail i{transform:none}}
 @media(max-width:820px){.card::before{display:none}}
 
 /* consistency fixes */
 .sigbg .lbl{color:rgba(7,8,13,.74)!important}
-.sbx{background:radial-gradient(900px 500px at 100% 0,rgba(255,90,31,.10),transparent 60%),#12131b!important;box-shadow:0 -1px 0 rgba(243,239,230,.08)}
 .track{padding:0 var(--gx) 0 0!important}
 .sigbg{margin:-40px 0 0!important}
 .tg .chips span{display:inline-block;white-space:nowrap}
 @media(max-width:760px){.tg>div{grid-template-columns:minmax(0,1fr)}}
+
+/* steady typography: one weight per role, no pulsing */
+h1,h1 .l,.hn{font-variation-settings:normal!important;font-weight:800}
+h2.big,.wh h2,.sbt,#ev-h,#tk-h,#pa-h,.sigbg .big,.sigbg .big *{font-variation-settings:normal!important}
+h1 .l{transform:none!important}
+
+@media(min-width:821px){.track .alsoh{flex:0 0 auto;align-self:stretch;writing-mode:vertical-rl;transform:rotate(180deg);margin:0;padding:0 6px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sig);border-right:1px solid rgba(255,90,31,.45)}}
+
+/* ===== v4: one system ===== */
+.it,em{font-family:inherit!important;font-style:normal!important;font-weight:inherit;color:var(--sig)}
+.paper em,.ev em{color:inherit;text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.14em;text-decoration-color:var(--sig)}
+.mq span.it{color:transparent;-webkit-text-stroke:1.6px var(--ink)}
+.how2{max-width:60ch;margin:40px 0 0;font-size:18px;line-height:1.6;color:var(--pd)}
+.card .idx{position:static!important;font:500 13px 'DM Mono',monospace!important;-webkit-text-stroke:0!important;color:var(--dim)!important;letter-spacing:0!important}
+
+/* ===== v4 motion system: one mask-wipe language ===== */
+.wm{perspective:none}
+.wm>span{transform:translateY(110%)!important;transition:transform 1.05s cubic-bezier(.2,.8,.2,1) var(--d,0s)!important}
+.sp.in .wm>span{transform:none!important}
+@media(min-width:821px){
+ #gl{position:fixed!important;inset:0;width:100vw;height:100vh;z-index:0}
+ .hero,.mq,.blk,.ev,.work,#contact{position:relative;z-index:1}
+ .hero{background:transparent}
+ #manifesto{border-radius:40px;margin-bottom:0}
+ .work{background:transparent!important;margin-top:0!important;border-radius:0!important}
+ .card{background:rgba(12,13,19,.5)!important;-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);border-color:rgba(243,239,230,.14)!important}
+ .unf{will-change:clip-path}
+}
+@media(prefers-reduced-motion:reduce){.wm>span{transform:none!important}}
+.tg{margin-top:24px!important}
+.hero .hs{max-width:30ch!important}
 </style>
 </head>
 <body class="lock">
 <a class="skip" href="#main">Skip to content</a>
 <div id="pre" aria-hidden="true"><span class="mono">Karthik Uppari · Portfolio</span><b id="cnt">0</b></div>
 <div id="bar" aria-hidden="true"></div><div id="cur" aria-hidden="true"></div><div id="curt" aria-hidden="true"></div>
-<nav><a href="#top" class="logo sc">Karthik Uppari</a><div class="nv"><a href="#work" class="sc">Work</a><a href="#evidence" class="sc">Evidence</a><a href="#path" class="sc">Path</a><a href="#sandbox" class="sc">Playground</a><a href="#contact" class="sc">Contact</a><button class="k mono" id="kbtn" aria-label="Open command palette">⌘ K</button></div></nav>
+<nav><a href="#top" class="logo sc">Karthik Uppari</a><div class="nv"><a href="#work" class="sc">Work</a><a href="#evidence" class="sc">Evidence</a><a href="#path" class="sc">Path</a><a href="#contact" class="sc">Contact</a><button class="k mono" id="kbtn" aria-label="Open command palette">⌘ K</button></div></nav>
 
 <div id="hire" role="region" aria-label="Hire me"><i class="dot" aria-hidden="true"></i><span class="tx">Open to internships</span><button id="hcopy">Copy email</button><a class="pr" href="assets/Karthik_Uppari_Resume.pdf" target="_blank" rel="noopener">Résumé</a></div>
 <div id="wipe" aria-hidden="true"></div>
@@ -481,15 +439,15 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <p class="hs fu" style="--fd:1s">I build <em>full-stack products</em> with <em>AI inside</em> that people can actually use.</p>
 <p class="mono hq fu" style="--fd:1.15s">Three deployed full-stack projects, plus two more. Every project number on this page is measured, with its catch next to it.</p>
 <p class="hp fu" style="--fd:1.25s"><a class="pri" href="#work">View projects</a><a href="assets/Karthik_Uppari_Resume.pdf" download>Download résumé</a><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a></p>
-<a class="badge fu" style="--fd:1.4s" href="#work" aria-label="See the work"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bp1" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bp1" startOffset="0">OPEN TO INTERNSHIPS · FULL-STACK + AI · 2026 · </textPath></text></svg><b aria-hidden="true">↗</b></a>
 <a class="scrl mono fu" style="--fd:1.3s" href="#manifesto">Scroll ↓</a>
 </header>
-<div class="mq" aria-hidden="true"><div id="mq"></div><div class="mq2"><div id="mq2"></div></div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
 
 <main id="main">
 <section id="manifesto" class="blk paper" aria-label="About">
 <p class="mono lbl">About</p>
 <p id="mf" class="mf" data-t="I'm a computer science student who builds *full-stack products* with *AI inside*. I ship things people can click, then learn how each part works. *Real-time streaming.* Payment recovery a human approves. Hardware that talks to models."></p>
+<p class="how2">I build with AI coding tools like a fast junior engineer: I write the spec, review every change and own the decisions. Then I read the code, run the tests and trace the key flows until I can explain how each part works.</p>
 <div class="stats">
 <div class="rv"><b data-n="100" data-s="+">0</b><span>students led through a STEM-career awareness project</span></div>
 <div class="rv"><b data-n="2">0</b><span>internships and traineeships: IoT and robotics, machine learning</span></div>
@@ -525,7 +483,6 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 
 <section id="toolkit" class="blk bluebg" aria-labelledby="tk-h">
 <p class="mono lbl">What I work with</p><h2 class="big rv" id="tk-h">Toolkit</h2>
-<div class="cyl" aria-hidden="true"><div class="cyl-in" style="--n:16"><span style="--i:0">JavaScript</span><span style="--i:1">Python</span><span style="--i:2">C++</span><span style="--i:3">React</span><span style="--i:4">Tailwind</span><span style="--i:5">Node.js</span><span style="--i:6">Express</span><span style="--i:7">REST</span><span style="--i:8">JWT</span><span style="--i:9">MongoDB</span><span style="--i:10">Mongoose</span><span style="--i:11">Gemini</span><span style="--i:12">SSE</span><span style="--i:13">Git</span><span style="--i:14">Vercel</span><span style="--i:15">Render</span></div></div>
 <div class="tg rv">
 <div><h3>Languages</h3><p class="chips"><span>JavaScript</span><span>Python</span><span>C++</span></p></div>
 <div><h3>Frontend</h3><p class="chips"><span>React</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span></p></div>
@@ -543,46 +500,13 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <div class="p rv"><span class="mono">Aug – Sep 2024</span><div><h3>T-Works · IoT &amp; Robotics Trainee</h3><p>Technical engineer on AI-powered smart street lights: hardware integration, sensor calibration, IoT connectivity, and the link between the AI model and the physical system.</p></div></div>
 <div class="p rv"><span class="mono">Aug 2024</span><div><h3>Rubaroo · Community Volunteer</h3><p>Created and led a small STEM-career awareness project that engaged 100+ students through discussion, storytelling and interactive sessions.</p></div></div>
 <div class="p rv"><span class="mono">Apr – Jul 2024</span><div><h3>Airbac Labs · Student Intern</h3><p>Learned Python and machine learning and applied them to practical projects, including stock-market prediction models.</p></div></div>
-<div class="now rv"><div><p class="mono" style="color:var(--sig)">NOW IMPROVING</p><p>CogniSpace and RecoverFlow</p></div><div><p>Both are live. CogniSpace's AI Copilot depends on Google's Gemini, which can be busy, so the next change is retries and a fallback model. RecoverFlow is the one I am turning into a real product for Indian D2C brands on Razorpay.</p><p class="dim">DocuMind and AgentGate stay live under Also built.</p></div></div>
 </section>
 
-<section id="sandbox" class="blk sbx" aria-labelledby="sb-h">
-<p class="mono lbl" style="color:var(--dim)">Also built · AgentGate</p>
-<h2 class="sbt" id="sb-h">Try to break the gate.</h2>
-<p class="sbs">This is AgentGate's real policy engine and argument checks, copied from the repo and running in your browser against a simulated workspace. Nothing is executed. The challenge: get ₹15,000 of refunds through without a human.</p>
-<div class="sbg">
-<div class="sbc">
-<span class="mono">1 · Pick a tool call</span>
-<div class="chp" id="sb-presets" role="group" aria-label="Example tool calls"></div>
-<label class="mono" for="sb-tool">Tool</label>
-<select id="sb-tool"></select>
-<label class="mono" for="sb-args">Arguments (JSON)</label>
-<textarea id="sb-args" rows="7" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
-<div class="sbb"><button class="sbbtn pri" id="sb-run" data-cur="Send">Send to the gate</button><button class="sbbtn" id="sb-reset">Reset run</button></div>
-<p class="mono" id="sb-state" aria-live="polite"></p>
-</div>
-<div class="sbc">
-<span class="mono">2 · What the gate decides</span>
-<div id="sb-out" aria-live="polite"><p class="idle">Pick an example or write your own call, then send it. Try the ones that look sneaky.</p></div>
-<div id="sb-bnr" aria-live="polite"></div>
-<details><summary class="mono">3 · The policy it is judging against (editable JSON)</summary>
-<textarea id="sb-pol" rows="16" spellcheck="false" aria-label="Policy JSON" autocapitalize="off" autocomplete="off"></textarea>
-<p id="sb-perr" class="mono" role="alert"></p>
-<div class="sbb"><button class="sbbtn" id="sb-preset-pol">Restore default policy</button></div>
-</details>
-<span class="mono" style="display:block;margin:22px 0 8px;color:var(--dim)">Run so far</span>
-<ol id="sb-log"><li class="idle">Nothing sent yet.</li></ol>
-</div>
-</div>
-</section>
 
-<section class="blk paper" aria-labelledby="hw-h"><p class="mono lbl">How I build</p><h2 class="sr" id="hw-h" style="position:absolute;width:1px;height:1px;overflow:hidden">How I build</h2>
-<p class="how rv">I build with AI coding tools like a fast junior engineer: I write the spec, <em>review every change</em> and own the decisions. Then I read the code, run the tests and trace the key flows until I can explain how each part works.</p></section>
 
 <section id="contact" class="blk sigbg" aria-labelledby="ct-h">
 <p class="mono lbl">Contact</p><h2 class="sr" id="ct-h" style="position:absolute;width:1px;height:1px;overflow:hidden">Contact</h2>
 <a class="big" href="mailto:upparikarthik505@gmail.com" data-cur="Email">Let's talk.</a>
-<button class="badge cbadge" type="button" id="cbadge" aria-label="Copy email address"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bp2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bp2" startOffset="0">SAY HI · COPY MY EMAIL · SAY HI · COPY MY EMAIL · </textPath></text></svg><b aria-hidden="true">↗</b></button>
 <div class="btnr"><button id="cpe" aria-live="polite">Copy email</button><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a></div>
 <p class="cmail">upparikarthik505@gmail.com</p>
 <div class="cfoot mono"><span>Hyderabad, India · <span id="clk">IST</span></span><span>Vanilla JS, one WebGL shader, no framework</span><span>© 2026 Karthik Uppari</span></div>
@@ -592,7 +516,6 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <section id="case" role="dialog" aria-modal="true" aria-label="Case study" aria-hidden="true" data-lenis-prevent><button id="cx" class="mono">Close · Esc</button><div id="cbody"></div></section>
 <div id="pal" role="dialog" aria-modal="true" aria-label="Command palette"><div><input id="pin" placeholder="Jump to…" aria-label="Command"><ul id="pls" role="listbox"></ul></div></div>
 
-<script type="module">import {kinetic} from "./kinetic.js";kinetic({fx:{"#ev-h":"pop","#sb-h":"pop"},waveOn:"",fill:".sub,.sbs"});</script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -601,7 +524,7 @@ const PRJ=[
  ['CogniSpace','Notes, docs and a sprint board in one workspace, with an AI Copilot that edits the page you are on.','Live · Full-stack'],
  ['RecoverFlow','Policy-first AI revenue recovery for failed Razorpay payments. The AI proposes, policy decides, a human approves.','Live · Payments'],
  ['DocuMind','Question answering over the Express 5 docs, built evaluation-first: cited answers, and refusals when the docs do not cover the question.','Live · Evaluation-first'],
- ['AgentGate','A policy gate and approval queue for AI agent tool calls: default deny, four-eyes approval, tamper-evident log.','Live · Playground'],
+ ['AgentGate','A policy gate and approval queue for AI agent tool calls: default deny, four-eyes approval, tamper-evident log.','Live · Security'],
  ['SpendLog','A full-stack expense tracker with monthly budgets, a six-month chart, search and CSV export. Small enough to explain end to end.','Live · Full-stack']];
 const LIVE=[1,1,1,1,1];
 /* display order: the three featured projects (matching the résumé), then the two under Also built. Indexes still point into the arrays below. */
@@ -650,17 +573,16 @@ const HT=$$('h2.big,.wh h2,.sbt,#ev-h');
 let LN=null;if(!RM&&FINE&&typeof Lenis!=='undefined'){try{LN=new Lenis({lerp:.11,wheelMultiplier:.95})}catch(e){LN=null}}
 
 /* cursor + label + letters */
-addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;
- if(RM)return;L.forEach(s=>{const r=s.getBoundingClientRect(),dx=tx-(r.left+r.width/2),dy=ty-(r.top+r.height/2),d=Math.hypot(dx,dy),k=Math.exp(-d/190);s.style.transform=`translateY(${-k*34}px) skewX(${-dx/26*k}deg)`})});
+addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;});
 document.addEventListener('pointerover',e=>{const t=e.target.closest('[data-cur]');const el=$('#curt');if(t){el.textContent=t.dataset.cur;el.classList.add('on')}else el.classList.remove('on')});
 /* link scramble */
 const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%/';
 $$('.sc').forEach(a=>{const o=a.textContent;a.addEventListener('pointerenter',()=>{if(RM)return;let n=0;const iv=setInterval(()=>{a.textContent=[...o].map((c,i)=>c==' '?' ':i<n?c:CH[Math.random()*CH.length|0]).join('');if(++n>o.length){a.textContent=o;clearInterval(iv)}},28)})});
 
 /* liquid-metal raymarched hero */
-const FS=`precision highp float;uniform vec2 r,m;uniform float t,s;
+const FS=`precision highp float;uniform vec2 r,m;uniform float t,s,mo;uniform vec3 ac;
 float sm(float a,float b,float k){float h=max(k-abs(a-b),0.)/k;return min(a,b)-h*h*k*.25;}
-float map(vec3 p){float d=length(p-vec3(sin(t*.7)*.55,cos(t*.9)*.35+s*.4,0.))-.55;
+float map(vec3 p){float ca=cos(mo*1.15),sa=sin(mo*1.15);p.xz=mat2(ca,-sa,sa,ca)*p.xz;float cb=cos(mo*.7),sb=sin(mo*.7);p.xy=mat2(cb,-sb,sb,cb)*p.xy;float d=length(p-vec3(sin(t*.7)*.55,cos(t*.9)*.35+s*.4,0.))-.55;
 d=sm(d,length(p-vec3(cos(t*.6)*.65+.2,sin(t*.8)*.4,.1))-.42,.5);
 d=sm(d,length(p-vec3(m*1.7,0.))-.34,.6);
 d=sm(d,length(p-vec3(sin(t*.5+2.)*.8,-.5+cos(t*.4)*.2,-.1))-.3,.5);return d;}
@@ -669,10 +591,10 @@ void main(){vec2 uv=(gl_FragCoord.xy-.5*r)/r.y;vec3 ro=vec3(0.,0.,2.7),rd=normal
 for(int i=0;i<48;i++){float d=map(ro+rd*tt);if(d<md){md=d;tm=tt;}if(d<.003){hit=1.;break;}tt+=d;if(tt>6.)break;}
 float cov=hit>0.?1.:1.-smoothstep(.003,.003+2.4/r.y*tm,md);
 vec3 c=mix(vec3(.02,.025,.06),vec3(.08,.1,.36),clamp(uv.y*.6+.45,0.,1.));
-c+=vec3(1.,.35,.12)*.18*exp(-length(uv-vec2(.5,-.1))*2.);
+c+=ac*.18*exp(-length(uv-vec2(.5,-.1))*2.);
 if(cov>0.){vec3 p=ro+rd*(hit>0.?tt:tm),n=nr(p),v=-rd,rf=reflect(rd,n);
 float a=smoothstep(-.3,.9,rf.y);vec3 env=mix(vec3(.02,.03,.12),vec3(.92,.94,1.),a);
-env+=vec3(1.,.38,.1)*pow(max(dot(rf,normalize(vec3(.8,.3,.5))),0.),22.)*1.7;
+env+=ac*pow(max(dot(rf,normalize(vec3(.8,.3,.5))),0.),22.)*1.7;
 env+=vec3(.25,.35,1.)*pow(max(dot(rf,normalize(vec3(-.9,.2,.4))),0.),16.)*1.5;
 float fr=pow(1.-max(dot(n,v),0.),3.);c=mix(c,mix(env*vec3(.88,.92,1.),vec3(1.),fr*.35),cov);}
 c*=1.-.45*length(uv*vec2(.7,1.));gl_FragColor=vec4(c,1.);}`;
@@ -683,13 +605,13 @@ const GL=(()=>{const c=$('#gl'),g=c.getContext('webgl',{antialias:false,alpha:fa
  if(!g.getProgramParameter(p,g.LINK_STATUS)){fb();return null}
  g.useProgram(p);g.bindBuffer(g.ARRAY_BUFFER,g.createBuffer());g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);
  const a=g.getAttribLocation(p,'a');g.enableVertexAttribArray(a);g.vertexAttribPointer(a,2,g.FLOAT,false,0,0);
- const U={};['r','m','t','s'].forEach(n=>U[n]=g.getUniformLocation(p,n));return{c,g,U}})();
-let heroVis=true,drawn=0;new IntersectionObserver(([e])=>heroVis=e.isIntersecting).observe($('#top'));
+ const U={};['r','m','t','s','mo','ac'].forEach(n=>U[n]=g.getUniformLocation(p,n));return{c,g,U}})();
+let heroVis=true,drawn=0;{const vis=new Set(['top']);const io=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?vis.add(e.target.id):vis.delete(e.target.id));heroVis=vis.size>0});io.observe($('#top'));if(innerWidth>820)io.observe($('#work'))}
 const QMIN=FINE?.45:.7;let QQ=FINE?.8:Math.min(devicePixelRatio||1,2)*.75,ft=0,fc=0,lt=0;if((navigator.hardwareConcurrency||8)<=2||(navigator.deviceMemory||8)<=2)QQ=Math.max(QMIN,QQ*.75);
 function drawGL(now){if(!GL||!heroVis||(RM&&drawn++>2))return;if(lt){const dt=now-lt;if(dt<250){ft+=dt;fc++;if(fc>=50){if(ft/fc>27&&QQ>QMIN)QQ=Math.max(QMIN,QQ*.88);ft=0;fc=0}}}lt=now;const{c,g,U}=GL,q=QQ,w=Math.max(2,c.clientWidth*q|0),h=Math.max(2,c.clientHeight*q|0);
  if(c.width!=w||c.height!=h){c.width=w;c.height=h;g.viewport(0,0,w,h)}
  const rc=c.getBoundingClientRect(),mx=(cx0-rc.left-rc.width/2)/rc.height,my=-(cy0-rc.top-rc.height/2)/rc.height;
- g.uniform2f(U.r,w,h);g.uniform2f(U.m,mx,my);g.uniform1f(U.t,RM?4:now/1000);g.uniform1f(U.s,clamp(scrollY/innerHeight,0,1));g.drawArrays(g.TRIANGLES,0,3)}
+ g.uniform2f(U.r,w,h);g.uniform2f(U.m,mx,my);g.uniform1f(U.t,RM?4:now/1000);g.uniform1f(U.s,clamp(scrollY/innerHeight,0,1));g.uniform1f(U.mo,window.MO||0);const A=window.AC||[1,.38,.1];g.uniform3f(U.ac,A[0],A[1],A[2]);g.drawArrays(g.TRIANGLES,0,3)}
 
 /* pinned gallery, manifesto, marquee loop */
 const tr=$('#track'),wk=$('#work');let maxX=0,lastY=scrollY,vel=0,mq=0,skew=0;
@@ -699,9 +621,9 @@ addEventListener('resize',sizeWork);
  drawGL(now||0);
  if(typeof PEND!=='undefined'&&PEND.length){const vh=innerHeight*.9;for(let i=PEND.length-1;i>=0;i--){const t=PEND[i],r=t.getBoundingClientRect();if(r.top<vh&&r.bottom>0){PEND.splice(i,1);showEl(t)}}}
  if(!RM){const T=(now||0)/1000;
-  if(heroVis)L.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(560+240*Math.sin(T*1.7-i*.62))}`);
-  const cr=$('#contact').getBoundingClientRect();if(cr.top<innerHeight&&cr.bottom>0)VT.forEach((s,i)=>s.style.fontVariationSettings=`'wght' ${Math.round(540+260*Math.sin(T*2-i*.7))}`);
-  HT.forEach(h=>{const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const k=clamp(1-(r.top+r.height/2)/innerHeight,0,1);h.style.fontVariationSettings=`'wght' ${Math.round(300+500*Math.sin(k*Math.PI))}`})}
+ /* steady type: no weight pulsing */
+
+}
 
  $('#bar').style.transform=`scaleX(${clamp(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight),0,1)})`;
  const dy=scrollY-lastY;lastY=scrollY;vel+=(dy-vel)*.1;skew+=(clamp(vel*.45,-10,10)-skew)*.15;
@@ -712,7 +634,7 @@ addEventListener('resize',sizeWork);
 Promise.all([document.fonts?document.fonts.ready:0]).then(sizeWork);sizeWork();
 
 /* card tilt + spotlight, magnetic controls, focus handling */
-$$('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(RM||!FINE)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--rx',((.5-y)*7).toFixed(2)+'deg');c.style.setProperty('--ry',((x-.5)*9).toFixed(2)+'deg');c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
+$$('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(RM||!FINE)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--rx',((.5-y)*3).toFixed(2)+'deg');c.style.setProperty('--ry',((x-.5)*9).toFixed(2)+'deg');c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
  c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
  c.addEventListener('focus',()=>{if(!maxX)return;const p=clamp((c.offsetLeft-24)/maxX,0,1);scrollTo({top:wk.offsetTop+p*(wk.offsetHeight-innerHeight),behavior:'auto'})})});
 $('.pin').addEventListener('scroll',e=>{e.target.scrollLeft=0});
@@ -825,8 +747,8 @@ document.addEventListener('pointerover',e=>{$('#cur').classList.toggle('hov',!!e
   return{set(x,y,on){S.mx=x;S.my=y;S.th=on?1:0;if(on&&ok)c.classList.add('on');if(!S.run&&(on||S.h>.01)){S.run=true;requestAnimationFrame(frame)}}}}
  $$('.card').forEach(card=>{const art=card.querySelector('.art');let D;const mv=e=>{if(D===undefined)D=make(art);if(!D)return;const r=art.getBoundingClientRect();const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;D.set(clamp(x,0,1),clamp(y,0,1),x>=-.1&&x<=1.1&&y>=-.1&&y<=1.1)};
   art.addEventListener('pointermove',mv);art.addEventListener('pointerenter',mv);art.addEventListener('pointerleave',()=>{if(D)D.set(.5,.5,false)})})})();
-/* hero letters get lighter near the cursor (variable font weight) */
-addEventListener('pointermove',e=>{if(RM||!FINE)return;L.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2)),k=Math.exp(-d/240);s.style.fontVariationSettings=`'wght' ${Math.round(800-560*k)}`})});
+
+
 document.documentElement.addEventListener('pointerleave',()=>{L.forEach(s=>s.style.fontVariationSettings='')});
 
 function route0(){const m=location.hash.match(/^#\/work\/([a-z]+)/),i=m?SLUG.indexOf(m[1]):-1;if(i>=0)showCase(i)}
@@ -838,7 +760,7 @@ function route0(){const m=location.hash.match(/^#\/work\/([a-z]+)/),i=m?SLUG.ind
 /* copy email + palette */
 $('#cpe').onclick=async e=>{try{await navigator.clipboard.writeText('upparikarthik505@gmail.com');e.target.textContent='Copied'}catch(x){e.target.textContent='Copy blocked'}setTimeout(()=>e.target.textContent='Copy email',1800)};
 const pal=$('#pal'),pin=$('#pin'),pls=$('#pls');let sel=0,items=[];
-const CMD=[...ORD.map(i=>['Open '+PRJ[i][0],()=>openCase(i)]),['Go to work',()=>go('work')],['Go to evidence',()=>go('evidence')],["Try AgentGate's policy gate (playground)",()=>go('sandbox')],['Go to path',()=>go('path')],['Go to contact',()=>go('contact')],['Open résumé (PDF)',()=>window.open('assets/Karthik_Uppari_Resume.pdf','_blank','noopener')],['Open GitHub',()=>window.open('https://github.com/karthik1122-code','_blank','noopener')],['Copy email',()=>navigator.clipboard&&navigator.clipboard.writeText('upparikarthik505@gmail.com')]];
+const CMD=[...ORD.map(i=>['Open '+PRJ[i][0],()=>openCase(i)]),['Go to work',()=>go('work')],['Go to evidence',()=>go('evidence')],["Try AgentGate's policy gate (live demo)",()=>open('https://agentgate-lake.vercel.app','_blank','noopener')],['Go to path',()=>go('path')],['Go to contact',()=>go('contact')],['Open résumé (PDF)',()=>window.open('assets/Karthik_Uppari_Resume.pdf','_blank','noopener')],['Open GitHub',()=>window.open('https://github.com/karthik1122-code','_blank','noopener')],['Copy email',()=>navigator.clipboard&&navigator.clipboard.writeText('upparikarthik505@gmail.com')]];
 function rl(){items=CMD.filter(c=>c[0].toLowerCase().includes(pin.value.toLowerCase()));sel=Math.min(sel,Math.max(0,items.length-1));pls.innerHTML=items.map((c,i)=>`<li role="option" aria-selected="${i==sel}" data-i="${i}">${c[0]}</li>`).join('')}
 function op(){pal.classList.add('on');pin.value='';rl();pin.focus()}function cl(){pal.classList.remove('on')}function run(i){if(items[i]){items[i][1]();cl()}}
 $('#kbtn').onclick=op;pal.onclick=e=>{if(e.target===pal)cl()};pls.onclick=e=>{const li=e.target.closest('li');if(li)run(+li.dataset.i)};pin.oninput=()=>{sel=0;rl()};
@@ -846,275 +768,11 @@ addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=='
  if(!pal.classList.contains('on'))return;if(e.key=='Escape')cl();if(e.key=='ArrowDown'){sel=Math.min(items.length-1,sel+1);rl();e.preventDefault()}
  if(e.key=='ArrowUp'){sel=Math.max(0,sel-1);rl();e.preventDefault()}if(e.key=='Enter')run(sel)});
 </script>
-<script>
-/* ---------- AgentGate sandbox: the repo's own policy engine + argument checks ---------- */
-(function(){
-const BL=s=>new TextEncoder().encode(s).length;
-/**
- * Policy engine. A policy is plain JSON, so it can be reviewed, diffed and versioned.
- *
- *   effect precedence when several rules match:  deny  >  approve  >  allow
- *   when nothing matches: policy.default (deny unless the policy says otherwise)
- *
- * Rules see the CANONICAL arguments (after the tool's own normalisation) plus run context, so a rule can
- * never be satisfied by a spelling the tool would later interpret differently.
- *
- * Context paths:  args.<field>   facts.<field>   run.calls   run.denials   projected.<field>
- * where projected.<field> = total of that numeric field over earlier executed calls of the same tool, plus this call.
- */
-const EFFECTS = ['allow', 'approve', 'deny'];
-const OPS = new Set(['eq', 'neq', 'in', 'notIn', 'gt', 'gte', 'lt', 'lte', 'startsWith', 'endsWith', 'contains', 'matches', 'exists']);
-const STRENGTH = { allow: 0, approve: 1, deny: 2 };
-const MAX_PATTERN = 200;
-const MAX_VALUE = 2000;
 
-function validatePolicy(policy) {
-  const errors = [];
-  if (!policy || typeof policy !== 'object') return ['policy must be an object'];
-  if (policy.version !== 1) errors.push('version must be 1');
-  if (policy.default !== undefined && !EFFECTS.includes(policy.default)) errors.push(`default must be one of ${EFFECTS.join(', ')}`);
-  if (!Array.isArray(policy.rules)) errors.push('rules must be an array');
-  const seen = new Set();
-  for (const [i, rule] of (policy.rules || []).entries()) {
-    const at = `rules[${i}]${rule?.id ? ` (${rule.id})` : ''}`;
-    if (!rule || typeof rule !== 'object') { errors.push(`${at}: must be an object`); continue; }
-    if (!rule.id || typeof rule.id !== 'string') errors.push(`${at}: id is required`);
-    else if (seen.has(rule.id)) errors.push(`${at}: duplicate id`);
-    else seen.add(rule.id);
-    if (!EFFECTS.includes(rule.effect)) errors.push(`${at}: effect must be one of ${EFFECTS.join(', ')}`);
-    const tools = Array.isArray(rule.tool) ? rule.tool : [rule.tool];
-    if (!tools.length || tools.some(t => typeof t !== 'string' || !t)) errors.push(`${at}: tool must be a name, a list of names, or "*"`);
-    if (!rule.reason || typeof rule.reason !== 'string') errors.push(`${at}: reason is required (it is shown to humans)`);
-    validateWhen(rule.when, at, errors);
-  }
-  return errors;
-}
 
-function validateWhen(when, at, errors) {
-  if (when === undefined) return;
-  if (!when || typeof when !== 'object' || Array.isArray(when)) { errors.push(`${at}: when must be an object`); return; }
-  for (const [key, cond] of Object.entries(when)) {
-    if (key === 'anyOf') { if (!Array.isArray(cond) || !cond.length) errors.push(`${at}: anyOf must be a non-empty array`); else cond.forEach(c => validateWhen(c, at, errors)); continue; }
-    if (key === 'not') { validateWhen(cond, at, errors); continue; }
-    if (!/^(args|run|projected|facts)\.[A-Za-z0-9_.]+$/.test(key)) { errors.push(`${at}: unknown path "${key}"`); continue; }
-    if (!cond || typeof cond !== 'object' || Array.isArray(cond)) { errors.push(`${at}: condition for ${key} must be an object of operators`); continue; }
-    for (const [op, arg] of Object.entries(cond)) {
-      if (!OPS.has(op)) { errors.push(`${at}: unknown operator "${op}" on ${key}`); continue; }
-      if (op === 'matches') {
-        if (typeof arg !== 'string' || arg.length > MAX_PATTERN) errors.push(`${at}: pattern on ${key} must be a string of at most ${MAX_PATTERN} characters`);
-        else if (/\([^)]*[+*][^)]*\)[+*{]/.test(arg)) errors.push(`${at}: pattern on ${key} has a nested quantifier, which can hang the matcher`);
-        else { try { new RegExp(arg); } catch { errors.push(`${at}: pattern on ${key} is not a valid regular expression`); } }
-      }
-      if (['in', 'notIn'].includes(op) && !Array.isArray(arg)) errors.push(`${at}: ${op} on ${key} needs an array`);
-    }
-  }
-}
-
-const get = (obj, path) => path.split('.').reduce((o, k) => (o !== null && typeof o === 'object' && Object.hasOwn(o, k) ? o[k] : undefined), obj);
-
-function testOp(op, actual, arg) {
-  switch (op) {
-    case 'exists': return (actual !== undefined && actual !== null) === Boolean(arg);
-    case 'eq': return actual === arg;
-    case 'neq': return actual !== arg;
-    case 'in': return arg.includes(actual);
-    case 'notIn': return !arg.includes(actual);
-    case 'gt': return typeof actual === 'number' && actual > arg;
-    case 'gte': return typeof actual === 'number' && actual >= arg;
-    case 'lt': return typeof actual === 'number' && actual < arg;
-    case 'lte': return typeof actual === 'number' && actual <= arg;
-    case 'startsWith': return typeof actual === 'string' && actual.startsWith(arg);
-    case 'endsWith': return typeof actual === 'string' && actual.endsWith(arg);
-    case 'contains': return typeof actual === 'string' ? actual.includes(arg) : Array.isArray(actual) && actual.includes(arg);
-    case 'matches': return typeof actual === 'string' && new RegExp(arg).test(actual.slice(0, MAX_VALUE));
-    default: return false;
-  }
-}
-
-function matchesWhen(when, ctx) {
-  if (!when) return true;
-  for (const [key, cond] of Object.entries(when)) {
-    if (key === 'anyOf') { if (!cond.some(c => matchesWhen(c, ctx))) return false; continue; }
-    if (key === 'not') { if (matchesWhen(cond, ctx)) return false; continue; }
-    const actual = get(ctx, key);
-    for (const [op, arg] of Object.entries(cond)) if (!testOp(op, actual, arg)) return false;
-  }
-  return true;
-}
-
-const toolMatches = (rule, tool) => (Array.isArray(rule.tool) ? rule.tool : [rule.tool]).some(t => t === '*' || t === tool);
-
-/** Returns { effect, rules:[{id,effect,reason}], reason, default:boolean }. */
-function evaluatePolicy(policy, tool, ctx) {
-  const matched = policy.rules.filter(r => toolMatches(r, tool) && matchesWhen(r.when, ctx)).map(r => ({ id: r.id, effect: r.effect, reason: r.reason }));
-  if (!matched.length) {
-    const effect = policy.default || 'deny';
-    return { effect, rules: [], reason: `No rule matches ${tool}; default is ${effect}.`, default: true };
-  }
-  const top = matched.reduce((a, b) => (STRENGTH[b.effect] > STRENGTH[a.effect] ? b : a));
-  return { effect: top.effect, rules: matched, reason: top.reason, default: false };
-}
-
-class ArgError extends Error { constructor(message) { super(message); this.code = 'invalid_args'; } }
-
-const PATH_OK = /^[A-Za-z0-9._\-/]+$/;
-function canonicalPath(value) {
-  if (typeof value !== 'string' || !value) throw new ArgError('path must be a non-empty string');
-  if (value.length > 200) throw new ArgError('path is too long');
-  if (!PATH_OK.test(value)) throw new ArgError('path contains characters that are not allowed (only letters, digits, . _ - /)');
-  if (value.startsWith('/')) throw new ArgError('absolute paths are not allowed');
-  const parts = value.split('/');
-  if (parts.some(p => p === '' || p === '.' || p === '..')) throw new ArgError('path must not contain empty, "." or ".." segments');
-  return value;
-}
-
-const secretPattern = /(AKIA[0-9A-Z]{16}|sk-[A-Za-z0-9_-]{16,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|(?:password|passwd|secret|api[_-]?key|token)\s*[:=]\s*\S{6,})/i;
-const INTERNAL_DOMAINS = ['company.com'];
-
-function checkShape(args, fields) {
-  if (!args || typeof args !== 'object' || Array.isArray(args)) throw new ArgError('arguments must be an object');
-  for (const key of Object.keys(args)) if (!Object.hasOwn(fields, key)) throw new ArgError(`unknown argument "${key}"`);
-  for (const [key, spec] of Object.entries(fields)) {
-    const v = args[key];
-    if (v === undefined) { if (spec.required) throw new ArgError(`${key} is required`); continue; }
-    if (spec.type === 'string' && (typeof v !== 'string' || v.length > (spec.max ?? 1000))) throw new ArgError(`${key} must be a string of at most ${spec.max ?? 1000} characters`);
-    if (spec.type === 'integer' && (!Number.isSafeInteger(v) || v < (spec.min ?? 0) || v > (spec.maxValue ?? Number.MAX_SAFE_INTEGER))) throw new ArgError(`${key} must be an integer between ${spec.min ?? 0} and ${spec.maxValue ?? 'the safe maximum'}`);
-    if (spec.enum && !spec.enum.includes(v)) throw new ArgError(`${key} must be one of ${spec.enum.join(', ')}`);
-    if (spec.type === 'stringArray' && (!Array.isArray(v) || v.length < 1 || v.length > (spec.maxItems ?? 10) || v.some(x => typeof x !== 'string' || x.length > 200))) throw new ArgError(`${key} must be a list of 1 to ${spec.maxItems ?? 10} short strings`);
-  }
-}
-
-const TOOLS = {
-  read_file: {
-    description: 'Read a text file from the workspace.',
-    fields: { path: { type: 'string', required: true, max: 200 } },
-    normalize: args => ({ path: canonicalPath(args.path) }),
-    facts: args => ({ is_dotfile: /(^|\/)\./.test(args.path) }),
-
-  },
-  write_file: {
-    description: 'Create or overwrite a text file.',
-    fields: { path: { type: 'string', required: true, max: 200 }, content: { type: 'string', required: true, max: 20000 } },
-    normalize: args => ({ path: canonicalPath(args.path), content: args.content }),
-    facts: args => ({ is_dotfile: /(^|\/)\./.test(args.path), bytes: BL(args.content), contains_secret: secretPattern.test(args.content) }),
-
-  },
-  send_email: {
-    description: 'Send an email.',
-    fields: { to: { type: 'stringArray', required: true, maxItems: 5 }, subject: { type: 'string', required: true, max: 200 }, body: { type: 'string', required: true, max: 5000 } },
-    normalize: args => {
-      const to = args.to.map(a => { const x = a.trim().toLowerCase(); if (!/^[a-z0-9._+-]+@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/.test(x)) throw new ArgError(`"${a}" is not a valid email address`); return x; });
-      return { to: [...new Set(to)], subject: args.subject, body: args.body };
-    },
-    facts: args => ({ external_recipients: args.to.filter(a => !INTERNAL_DOMAINS.includes(a.split('@')[1])).length, recipients: args.to.length, contains_secret: secretPattern.test(args.body) || secretPattern.test(args.subject) }),
-
-  },
-  refund_payment: {
-    description: 'Refund part or all of a payment. Amounts are in paise.',
-    fields: { payment_id: { type: 'string', required: true, max: 40 }, amount: { type: 'integer', required: true, min: 1, maxValue: 100_000_000 }, currency: { type: 'string', required: true, max: 3, enum: ['INR'] } },
-    normalize: args => { if (!/^pay_[A-Za-z0-9]{6,30}$/.test(args.payment_id)) throw new ArgError('payment_id must look like pay_XXXXXXXX'); return { payment_id: args.payment_id, amount: args.amount, currency: args.currency }; },
-    facts: () => ({}),
-
-  },
-  run_command: {
-    description: 'Run a shell command. SIMULATED: nothing is ever executed.',
-    fields: { command: { type: 'string', required: true, max: 200 } },
-    normalize: args => { if (/[\u0000-\u001f]/.test(args.command)) throw new ArgError('command contains control characters'); return { command: args.command.trim().replace(/\s+/g, ' ') }; },
-    facts: args => ({ has_shell_metachar: /[;&|`$<>(){}\\\n]/.test(args.command) }),
-
-  },
-};
-
-/** Validates and canonicalises a proposed call. Returns { tool, args, facts } or throws ArgError. */
-function prepareCall(toolName, rawArgs, { maxArgsBytes = 8192, tools = TOOLS } = {}) {
-  if (typeof toolName !== 'string' || !Object.hasOwn(tools, toolName)) throw new ArgError(`unknown tool "${String(toolName).slice(0, 60)}"`);
-  let size; try { size = BL(JSON.stringify(rawArgs ?? null)); } catch { throw new ArgError('arguments are not serialisable'); }
-  if (size > maxArgsBytes) throw new ArgError(`arguments are too large (${size} bytes, limit ${maxArgsBytes})`);
-  const tool = tools[toolName];
-  checkShape(rawArgs, tool.fields);
-  const args = tool.normalize(rawArgs);
-  return { tool: toolName, args, facts: tool.facts(args) };
-}
-
-const DEFAULT_POLICY={"version":1,"default":"deny","limits":{"maxCalls":25,"maxDenials":3,"maxArgsBytes":8192,"approvalTtlSeconds":900,"requireDifferentApprover":true},"rules":[{"id":"read-workspace","tool":"read_file","effect":"allow","when":{"args.path":{"startsWith":"workspace/"}},"reason":"Reading workspace files is allowed."},{"id":"write-workspace","tool":"write_file","effect":"allow","when":{"args.path":{"startsWith":"workspace/"},"facts.bytes":{"lte":20000}},"reason":"Writing inside the workspace is allowed."},{"id":"write-config","tool":"write_file","effect":"approve","when":{"args.path":{"startsWith":"config/"}},"reason":"Changing configuration needs a human to approve it."},{"id":"deny-dotfiles","tool":["read_file","write_file"],"effect":"deny","when":{"facts.is_dotfile":{"eq":true}},"reason":"Dotfiles such as .env hold credentials and are never touched."},{"id":"deny-secret-content","tool":["write_file","send_email"],"effect":"deny","when":{"facts.contains_secret":{"eq":true}},"reason":"The content looks like a credential or private key."},{"id":"email-internal","tool":"send_email","effect":"allow","when":{"facts.external_recipients":{"eq":0}},"reason":"Email to company addresses only is allowed."},{"id":"email-external","tool":"send_email","effect":"approve","when":{"facts.external_recipients":{"gt":0}},"reason":"Sending email outside the company needs a human to approve it."},{"id":"refund-small","tool":"refund_payment","effect":"allow","when":{"args.amount":{"lte":100000},"projected.amount":{"lte":200000}},"reason":"Refunds up to ₹1,000, within a ₹2,000 per-run total, are allowed."},{"id":"refund-medium","tool":"refund_payment","effect":"approve","when":{"args.amount":{"gt":100000}},"reason":"A refund above ₹1,000 needs a human to approve it."},{"id":"refund-cumulative","tool":"refund_payment","effect":"approve","when":{"projected.amount":{"gt":200000}},"reason":"This run's refunds now total more than ₹2,000, so each further refund needs a human."},{"id":"refund-large","tool":"refund_payment","effect":"deny","when":{"args.amount":{"gt":1000000}},"reason":"A single refund above ₹10,000 is never allowed from an agent."},{"id":"refund-budget","tool":"refund_payment","effect":"deny","when":{"projected.amount":{"gt":2000000}},"reason":"This run has reached its ₹20,000 refund budget."},{"id":"command-allowlist","tool":"run_command","effect":"allow","when":{"args.command":{"in":["pwd","ls","git status"]},"facts.has_shell_metachar":{"eq":false}},"reason":"Read-only commands on the allowlist are allowed."},{"id":"command-tests","tool":"run_command","effect":"approve","when":{"args.command":{"eq":"npm test"}},"reason":"Running the test suite needs a human to approve it."},{"id":"deny-shell-metachar","tool":"run_command","effect":"deny","when":{"facts.has_shell_metachar":{"eq":true}},"reason":"Shell metacharacters (; & | ` $ < > and similar) are never allowed."}]};
-const PRE=[
- ['Read a workspace note','read_file',{path:'workspace/notes.txt'}],
- ['Read the .env file','read_file',{path:'secrets/.env'}],
- ['Sneak in with ../','read_file',{path:'workspace/../secrets/.env'}],
- ['URL-encoded ../','read_file',{path:'workspace/%2e%2e/secrets/.env'}],
- ['Change a config file','write_file',{path:'config/app.json',content:'{"retries":9}'}],
- ['Email the team','send_email',{to:['asha@company.com'],subject:'Weekly report',body:'Revenue is up.'}],
- ['Email a stranger','send_email',{to:['me@outside.example'],subject:'hi',body:'Here is the report.'}],
- ['Leak a key by email','send_email',{to:['asha@company.com'],subject:'keys',body:'API_KEY=sk-live-0000000000000000000000'}],
- ['Refund ₹500','refund_payment',{payment_id:'pay_ABC12345',amount:50000,currency:'INR'}],
- ['Refund ₹5,000','refund_payment',{payment_id:'pay_ABC12345',amount:500000,currency:'INR'}],
- ['Refund ₹15,000','refund_payment',{payment_id:'pay_ABC12345',amount:1500000,currency:'INR'}],
- ['Run: ls; cat /etc/passwd','run_command',{command:'ls; cat /etc/passwd'}],
- ['Run: npm test','run_command',{command:'npm test'}]];
-const $=s=>document.querySelector(s),pretty=o=>JSON.stringify(o,null,2);
-const sel=$('#sb-tool'),args=$('#sb-args'),pol=$('#sb-pol'),out=$('#sb-out'),log=$('#sb-log'),stEl=$('#sb-state'),bnr=$('#sb-bnr'),perr=$('#sb-perr');
-Object.keys(TOOLS).forEach(t=>{const o=document.createElement('option');o.value=o.textContent=t;sel.appendChild(o)});
-const TPL={};PRE.forEach(p=>{if(!TPL[p[1]])TPL[p[1]]=p[2]});
-let st,policyText=pretty(DEFAULT_POLICY);
-const fresh=()=>({calls:0,denials:0,totals:{},refunded:0,log:[]});st=fresh();
-pol.value=policyText;
-const chips=$('#sb-presets');PRE.forEach((p,i)=>{const b=document.createElement('button');b.type='button';b.textContent=p[0];b.setAttribute('aria-pressed','false');b.onclick=()=>{sel.value=p[1];args.value=pretty(p[2]);[...chips.children].forEach(c=>c.setAttribute('aria-pressed',String(c===b)));send()};chips.appendChild(b)});
-sel.value='read_file';args.value=pretty(TPL.read_file);
-sel.onchange=()=>{args.value=pretty(TPL[sel.value]);[...chips.children].forEach(c=>c.setAttribute('aria-pressed','false'))};
-const rupee=n=>'₹'+(n/100).toLocaleString('en-IN');
-function txt(tag,t,cls){const e=document.createElement(tag);e.textContent=t;if(cls)e.className=cls;return e}
-async function fp(tool,a){try{const c=o=>Array.isArray(o)?o.map(c):o&&typeof o==='object'?Object.fromEntries(Object.keys(o).sort().map(k=>[k,c(o[k])])):o;const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(c({tool,args:a}))));return[...new Uint8Array(b)].slice(0,8).map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return null}}
-function state(){const lim=getPolicy().p?.limits?.maxDenials??3;stEl.textContent=`Calls ${st.calls} · denied ${st.denials} of ${lim} allowed · refunded without a human ${rupee(st.refunded)}`}
-function getPolicy(){try{const p=JSON.parse(pol.value),errs=validatePolicy(p);return{p,errs}}catch(e){return{p:null,errs:['Policy is not valid JSON: '+e.message]}}}
-function show(kind,label,sub,rows){out.replaceChildren();out.appendChild(txt('span',label,'vd v-'+kind));if(sub)out.appendChild(txt('p',sub,'sbs'));
- const dl=document.createElement('dl');dl.className='rs';rows.filter(Boolean).forEach(([k,v])=>{const w=document.createElement('div');w.appendChild(txt('dt',k,'mono'));const dd=document.createElement('dd');if(Array.isArray(v)){const rl=document.createElement('div');rl.className='rl';v.forEach(x=>rl.appendChild(txt('span',x,'mono')));dd.appendChild(rl)}else if(typeof v==='object'){dd.appendChild(txt('pre',pretty(v)))}else dd.appendChild(txt('p',v));w.appendChild(dd);dl.appendChild(w)});out.appendChild(dl)}
-function addLog(kind,tool,note){st.log.unshift([kind,tool,note]);log.replaceChildren();st.log.slice(0,8).forEach(([k,t,n])=>{const li=document.createElement('li');li.appendChild(txt('b',k,'mono'));li.appendChild(txt('span',t+' · '+n));log.appendChild(li)})}
-async function send(){
- let raw;try{raw=JSON.parse(args.value)}catch(e){show('rej','Not valid JSON','Fix the arguments box and send again.',[['Parser said',e.message]]);return}
- const {p,errs}=getPolicy();perr.textContent=errs.length?errs.join(' · '):'';if(errs.length){show('rej','Policy is invalid','The gate refuses to run on a policy that does not validate.',[['Problems',errs]]);return}
- const lim=p.limits||{};if(st.denials>=(lim.maxDenials??3)){show('deny','Run aborted','After '+st.denials+' denials the run is aborted (too_many_denials). Reset the run to try again.',[]);return}
- const tool=sel.value;let prep;
- try{prep=prepareCall(tool,raw,{maxArgsBytes:lim.maxArgsBytes??8192})}catch(e){show('rej','Rejected before judging',e.message+'.',[['What this means','The call never reached the policy. Arguments that cannot be put into one canonical form are refused, so the policy only ever judges what would actually run.']]);addLog('REJECTED',tool,e.message);return}
- st.calls++;const projected={};for(const[k,v] of Object.entries(prep.args))if(typeof v==='number')projected[k]=((st.totals[tool]||{})[k]||0)+v;
- const d=evaluatePolicy(p,tool,{args:prep.args,facts:prep.facts,run:{calls:st.calls,denials:st.denials},projected});
- const f=await fp(tool,prep.args);const rows=[['Rules that matched',d.rules.length?d.rules.map(r=>r.id+' → '+r.effect):['none (default: '+(p.default||'deny')+')']],['The call as the gate saw it',prep.args],['Facts it computed',prep.facts],f?['Call fingerprint (an approval would bind to this)',f]:null];
- if(d.effect==='allow'){const t=st.totals[tool]||(st.totals[tool]={});for(const[k,v] of Object.entries(prep.args))if(typeof v==='number')t[k]=(t[k]||0)+v;if(tool==='refund_payment')st.refunded+=prep.args.amount;show('allow','Allowed. Runs now.',d.reason+' (Simulated: nothing real happens.)',rows);addLog('ALLOWED',tool,d.reason)}
- else if(d.effect==='approve'){show('hold','Held for a human.',d.reason+' In AgentGate a different signed-in person must approve this exact call before it runs.',rows);addLog('HELD',tool,d.reason)}
- else{st.denials++;show('deny','Denied. Never runs.',d.reason,rows);addLog('DENIED',tool,d.reason)}
- state();
- if(st.refunded>=1500000){const dflt=JSON.stringify(p)===JSON.stringify(DEFAULT_POLICY);bnr.replaceChildren();const b=txt('p',dflt?'You moved ₹15,000 with no human. That should not be possible with the default policy, so please email me how you did it: upparikarthik505@gmail.com.':'You moved ₹15,000 with no human, but only because you edited the policy. That is the point of keeping policies as reviewable JSON: a change like yours would show up in a diff.','bnr');bnr.appendChild(b)}else bnr.replaceChildren()}
-$('#sb-run').onclick=send;
-args.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter'){e.preventDefault();send()}});
-pol.addEventListener('input',()=>{const{errs}=getPolicy();perr.textContent=errs.join(' · ')});
-$('#sb-preset-pol').onclick=()=>{pol.value=pretty(DEFAULT_POLICY);perr.textContent=''};
-$('#sb-reset').onclick=()=>{st=fresh();log.replaceChildren(txt('li','Nothing sent yet.','idle'));out.replaceChildren(txt('p','Run reset. Pick an example or write your own call, then send it.','idle'));bnr.replaceChildren();state()};
-state();
-})();
-</script>
-
-<script>
-/* live status panel: reachability + round-trip time, measured in the visitor's browser */
-
-const FLAPC='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-function flap(el,txt,delay){el.setAttribute('aria-label',txt);const ch=[...txt];
- el.innerHTML=ch.map(c=>`<i class="tl${c===' '?' sp':''}" aria-hidden="true">${RM?c:' '}</i>`).join('');if(RM)return;
- [...el.children].forEach((t,k)=>{if(ch[k]===' ')return;let n=0;const steps=5+k;setTimeout(()=>{const iv=setInterval(()=>{n++;t.textContent=n>=steps?ch[k]:FLAPC[Math.random()*FLAPC.length|0];t.classList.remove('fp');void t.offsetWidth;t.classList.add('fp');if(n>=steps)clearInterval(iv)},55)},(delay||0)+k*28)})}
-(function(){const ul=document.getElementById('lp-l');if(!ul||typeof CASE==='undefined')return;
- const rows=ORD.map(i=>({name:PRJ[i][0],desc:CASE[i].stack.split(' · ').slice(0,3).join(' · '),url:CASE[i].demo,slug:SLUG[i],also:ORD.indexOf(i)>=FEAT})).filter(r=>r.url);
- ul.innerHTML=rows.map((r,i)=>(r.also&&!rows[i-1]?.also?`<li class="lpsep mono">Also built</li>`:'')+`<li><a href="${r.url}" target="_blank" rel="noopener" aria-label="Open ${r.name} live demo"><span><b>${r.name}</b><small>${r.desc}</small></span><span class="st" id="st${i}"><i></i>checking</span><span class="ms" id="ms${i}">–</span></a></li>`).join('');
- let up=0,done=0;const sum=document.getElementById('lp-s');
- rows.forEach((r,i)=>{const st=document.getElementById('st'+i),ms=document.getElementById('ms'+i),t0=performance.now();
-  const slow=setTimeout(()=>{st.className='st slow';st.innerHTML='<i></i>waking up'},3500);
-  const c=new AbortController(),to=setTimeout(()=>c.abort(),45000);
-  fetch(r.url,{mode:'no-cors',cache:'no-store',signal:c.signal}).then(()=>{const d=Math.round(performance.now()-t0);st.className='st ok';st.innerHTML='<i></i>online';flap(ms,d>=1000?(d/1000).toFixed(1)+' s':d+' ms');up++}).catch(()=>{st.className='st bad';st.innerHTML='<i></i>no response';ms.textContent='–'}).finally(()=>{clearTimeout(slow);clearTimeout(to);done++;sum.textContent=up+' of '+rows.length+' online'+(done<rows.length?'…':'')});});
- sum.textContent='checking…';
- ul.querySelectorAll('b').forEach((b,i)=>flap(b,b.textContent,1500+i*160));
- /* active nav link */
- const links=[...document.querySelectorAll('.nv a.sc')],map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+<script>(function(){const links=[...document.querySelectorAll('.nv a.sc')],map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove('act'));map.get(e.target.id)?.classList.add('act')}}),{rootMargin:'-45% 0px -50% 0px'});
- map.forEach((a,id)=>{const el=document.getElementById(id);if(el)io.observe(el)});
-})();
-</script>
+ map.forEach((a,id)=>{const el=document.getElementById(id);if(el)io.observe(el)})})();</script>
 
 <script>(function(){const c=document.getElementById('clk');if(!c)return;const f=()=>{try{c.textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'2-digit',hour12:true}).format(new Date())+' IST'}catch(e){}};f();setInterval(f,30000)})();</script>
 
@@ -1124,7 +782,7 @@ function flap(el,txt,delay){el.setAttribute('aria-label',txt);const ch=[...txt];
  function f(now){const dt=Math.min(64,now-last);last=now;const dy=scrollY-ly;ly=scrollY;boost=boost*.92+Math.abs(dy)*.06;
   if(cy){ang=(ang+dt*(.012+boost*.02))%360;cy.style.setProperty('--ang',ang.toFixed(2)+'deg')}
   const p=Math.min(1,Math.max(0,scrollY/innerHeight));
-  if(h&&p<1.05){h.style.transform=`translate3d(0,${(-p*120).toFixed(1)}px,0) scale(${(1-p*.12).toFixed(3)}) rotateX(${(p*18).toFixed(2)}deg)`;h.style.opacity=(1-p*.85).toFixed(3);h.style.transformOrigin='50% 100%';
+  if(h&&p<1.05){h.style.transform=`perspective(1400px) translate3d(0,${(-p*120).toFixed(1)}px,0) scale(${(1-p*.12).toFixed(3)}) rotateX(${(p*18).toFixed(2)}deg)`;h.style.opacity=(1-p*.85).toFixed(3);h.style.transformOrigin='50% 100%';
    sub.forEach((e,k)=>{e.style.transform=`translate3d(0,${(-p*(40+k*20)).toFixed(1)}px,0)`;e.style.opacity=(1-p*1.4).toFixed(3)})}
   requestAnimationFrame(f)}
  requestAnimationFrame(f)})();</script>
@@ -1141,6 +799,23 @@ function flap(el,txt,delay){el.setAttribute('aria-label',txt);const ch=[...txt];
   if(m2&&!RMx){x2+=1.2+Math.abs(v)*.5;const w=m2.scrollWidth/2;if(x2>w)x2=0;m2.style.transform=`translateX(${x2-w}px)`}
   if(tr&&wcn){const p=parseFloat(tr.style.getPropertyValue('--p'))||0;const k=Math.min(N-1,Math.floor(p*N));wcn.textContent='0'+(k+1);wcb.style.transform=`scaleX(${p.toFixed(3)})`}
   if(ri){const r=rail.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));ri.style.transform=`scaleY(${RMx?1:p.toFixed(3)})`}
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f)})();</script>
+
+<script>(function(){
+ /* per-project metal: colour and form follow the card in view */
+ const ACC={0:[.62,.45,1],1:[.72,1,.32],2:[1,.45,.78],3:[1,.74,.12],4:[.22,.88,.52]};
+ const HERO=[1,.38,.1];window.MO=0;window.AC=HERO.slice();
+ const ORDX=(typeof ORD!=='undefined')?ORD:[4,0,1,2,3];
+ const tr=document.getElementById('track'),wk=document.getElementById('work');
+ const RMx=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const secs=[...document.querySelectorAll('.blk,.ev')].filter(e=>e.id!=='manifesto');secs.forEach(e=>e.classList.add('unf'));
+ const lerp=(a,b,k)=>a+(b-a)*k;
+ function f(){
+  let tgtMo=0,tgtAc=HERO;
+  if(wk&&tr&&innerWidth>820){const r=wk.getBoundingClientRect();if(r.top<innerHeight*.5&&r.bottom>innerHeight*.5){const p=parseFloat(tr.style.getPropertyValue('--p'))||0,n=ORDX.length,k=Math.min(n-1,Math.floor(p*n));tgtMo=1+k*1.3;tgtAc=ACC[ORDX[k]]||HERO}}
+  window.MO=lerp(window.MO,tgtMo,.05);for(let c=0;c<3;c++)window.AC[c]=lerp(window.AC[c],tgtAc[c],.06);
+  if(!RMx&&innerWidth>820)secs.forEach(e=>{const t=e.getBoundingClientRect().top,p=Math.min(1,Math.max(0,(innerHeight-t)/(innerHeight*.55))),x=((1-p)*4).toFixed(2);e.style.clipPath=p>=1?'':`inset(0 ${x}vw 0 ${x}vw round 40px 40px 0 0)`});
   requestAnimationFrame(f)}
  requestAnimationFrame(f)})();</script>
 </body>
