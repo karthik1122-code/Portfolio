@@ -371,6 +371,37 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 #manifesto .lp .mono,#manifesto .lp small,#manifesto .lp .lpf{color:rgba(243,239,230,.72)}
 #manifesto .lph h2{color:var(--bone);font-size:14px}
 .hp a{white-space:nowrap}
+
+/* designer pass */
+.stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:96px;border-top:1px solid rgba(7,8,13,.25)}
+.stats>div,.paper .stats>div{border:0;border-radius:0;background:none;padding:28px 28px 0 0}
+.stats>div+div{border-left:1px solid rgba(7,8,13,.18);padding-left:28px}
+.stats b{font-size:clamp(72px,9vw,148px)!important;letter-spacing:-.065em;line-height:.85}
+.stats span{font-size:16px;max-width:26ch}
+@media(max-width:760px){.stats{grid-template-columns:1fr}.stats>div+div{border-left:0;border-top:1px solid rgba(7,8,13,.18);padding-left:0}.stats>div{padding:24px 0}}
+.mf{font-size:clamp(28px,3.4vw,52px)!important;max-width:28ch;line-height:1.12}
+/* toolkit as a typographic index */
+.tg{display:block;margin-top:56px;border-bottom:1px solid rgba(243,239,230,.35)}
+.tg>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px 32px;align-items:baseline;border:0;border-top:1px solid rgba(243,239,230,.35);border-radius:0;background:none!important;padding:26px 0;transform:none!important}
+.tg h3{font:500 13px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;margin:0;opacity:.8}
+.tg .chips span{display:inline;border:0;padding:0;margin:0;border-radius:0;font-size:clamp(22px,2.5vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.25;background:none!important;color:var(--bone)!important;transition:opacity .2s}
+.tg .chips span+span::before{content:'/';margin:0 .4em;opacity:.35;font-weight:400}
+.tg .chips:hover span{opacity:.45}.tg .chips span:hover{opacity:1}
+@media(max-width:760px){.tg>div{grid-template-columns:1fr}}
+/* path timeline with a rail */
+.p{position:relative;grid-template-columns:220px minmax(0,1fr);padding:34px 0 34px 0}
+.p>.mono{font-size:15px;color:var(--bone);padding-left:26px;position:relative}
+.p>.mono::before{content:'';position:absolute;left:0;top:.45em;width:9px;height:9px;border-radius:50%;background:var(--sig);box-shadow:0 0 0 5px rgba(255,90,31,.18)}
+.p h3{font-size:clamp(22px,2.4vw,32px)!important}
+.p:hover{padding-left:0!important;background:none!important}
+.p:hover h3{color:var(--sig)}
+.now{margin:72px 0 0!important;border-color:rgba(255,90,31,.45)!important;background:linear-gradient(135deg,rgba(255,90,31,.12),rgba(255,90,31,.02))!important}
+@media(max-width:760px){.p{grid-template-columns:1fr}}
+/* contact as a closing poster */
+.sigbg{margin:0!important;border-radius:40px 40px 0 0!important;padding:120px var(--gx) 40px!important}
+.cmail{margin:56px 0 0;font-size:clamp(24px,4.4vw,64px);font-weight:700;letter-spacing:-.04em;overflow-wrap:anywhere;user-select:all}
+.cfoot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:96px;padding-top:22px;border-top:1px solid rgba(7,8,13,.3);font-size:13px}
+.bluebg .lbl{color:rgba(243,239,230,.85)!important}.stats>div+div{border-left:1px solid rgba(7,8,13,.18)!important}
 </style>
 </head>
 <body class="lock">
@@ -431,7 +462,7 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 </div></section>
 
 <section id="toolkit" class="blk bluebg" aria-labelledby="tk-h">
-<p class="mono lbl">Toolkit</p><h2 class="big rv" id="tk-h">Toolkit</h2>
+<p class="mono lbl">What I work with</p><h2 class="big rv" id="tk-h">Toolkit</h2>
 <div class="tg rv">
 <div><h3>Languages</h3><p class="chips"><span>JavaScript</span><span>Python</span><span>C++</span></p></div>
 <div><h3>Frontend</h3><p class="chips"><span>React</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span></p></div>
@@ -442,14 +473,14 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 </div></section>
 
 <section id="path" class="blk dk" aria-labelledby="pa-h">
-<p class="mono lbl" style="color:var(--dim)">Path</p>
-<div class="now rv"><div><p class="mono" style="color:var(--sig)">NOW IMPROVING</p><p>CogniSpace and RecoverFlow</p></div><div><p>Both are live. CogniSpace's AI Copilot depends on Google's Gemini, which can be busy, so the next change is retries and a fallback model. RecoverFlow is the one I am turning into a real product for Indian D2C brands on Razorpay.</p><p class="dim">DocuMind and AgentGate stay live under Also built.</p></div></div>
+<p class="mono lbl" style="color:var(--dim)">Education and experience</p>
 <h2 class="big rv" id="pa-h">Path</h2>
 <div class="p rv"><span class="mono">2025 – 2029</span><div><h3>B.Tech, CS (AI/ML)</h3><p>NxtWave Institute of Advanced Technologies (NIAT). Foundations in C++, Python, data structures and algorithms, and machine learning. SGPA: 9.52 (Semester 3).</p></div></div>
 <div class="p rv"><span class="mono">2023 – 2025</span><div><h3>Intermediate (Class XII) · Texas International</h3><p>Percentage: 90.5%</p></div></div>
 <div class="p rv"><span class="mono">Aug – Sep 2024</span><div><h3>T-Works · IoT &amp; Robotics Trainee</h3><p>Technical engineer on AI-powered smart street lights: hardware integration, sensor calibration, IoT connectivity, and the link between the AI model and the physical system.</p></div></div>
 <div class="p rv"><span class="mono">Aug 2024</span><div><h3>Rubaroo · Community Volunteer</h3><p>Created and led a small STEM-career awareness project that engaged 100+ students through discussion, storytelling and interactive sessions.</p></div></div>
 <div class="p rv"><span class="mono">Apr – Jul 2024</span><div><h3>Airbac Labs · Student Intern</h3><p>Learned Python and machine learning and applied them to practical projects, including stock-market prediction models.</p></div></div>
+<div class="now rv"><div><p class="mono" style="color:var(--sig)">NOW IMPROVING</p><p>CogniSpace and RecoverFlow</p></div><div><p>Both are live. CogniSpace's AI Copilot depends on Google's Gemini, which can be busy, so the next change is retries and a fallback model. RecoverFlow is the one I am turning into a real product for Indian D2C brands on Razorpay.</p><p class="dim">DocuMind and AgentGate stay live under Also built.</p></div></div>
 </section>
 
 <section id="sandbox" class="blk sbx" aria-labelledby="sb-h">
@@ -489,7 +520,8 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <p class="mono lbl">Contact</p><h2 class="sr" id="ct-h" style="position:absolute;width:1px;height:1px;overflow:hidden">Contact</h2>
 <a class="big" href="mailto:upparikarthik505@gmail.com" data-cur="Email">Let's talk.</a>
 <div class="btnr"><button id="cpe" aria-live="polite">Copy email</button><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a></div>
-<p class="mono" style="margin:60px 0 0">upparikarthik505@gmail.com · Hyderabad, India</p>
+<p class="cmail">upparikarthik505@gmail.com</p>
+<div class="cfoot mono"><span>Hyderabad, India · <span id="clk">IST</span></span><span>Vanilla JS, one WebGL shader, no framework</span><span>© 2026 Karthik Uppari</span></div>
 </section>
 </main>
 
@@ -1019,5 +1051,7 @@ function flap(el,txt,delay){el.setAttribute('aria-label',txt);const ch=[...txt];
  map.forEach((a,id)=>{const el=document.getElementById(id);if(el)io.observe(el)});
 })();
 </script>
+
+<script>(function(){const c=document.getElementById('clk');if(!c)return;const f=()=>{try{c.textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'2-digit',hour12:true}).format(new Date())+' IST'}catch(e){}};f();setInterval(f,30000)})();</script>
 </body>
 </html>
