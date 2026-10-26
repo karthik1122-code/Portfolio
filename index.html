@@ -416,6 +416,45 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 .hero h1,.hero .hs,.hero .hq,.hero .hp{will-change:transform,opacity}
 @media(prefers-reduced-motion:reduce){.wm>span{transform:none!important}}
 .hero{perspective:1400px}
+
+/* massive pass */
+.badge{position:absolute;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;color:var(--bone);z-index:4;text-decoration:none}
+.badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 14s linear infinite;overflow:visible}
+.badge text{font:600 13.2px 'DM Mono',monospace;letter-spacing:.18em;fill:currentColor}
+.badge b{width:58px;height:58px;border-radius:50%;background:var(--sig);color:var(--ink);display:grid;place-items:center;font-size:26px;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.badge:hover b{transform:scale(1.18) rotate(45deg)}
+.badge:hover svg{animation-duration:5s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero>.badge{right:var(--gx);top:46%}
+.cbadge{position:absolute;right:var(--gx);top:110px;width:190px;height:190px;color:var(--ink);background:none;border:0;cursor:pointer}
+.cbadge b{background:var(--ink);color:var(--sig);width:74px;height:74px}
+.sigbg{position:relative}
+@media(max-width:820px){.badge{display:none}}
+.mq{padding:14px 0 70px}
+.mq2{margin-top:6px;overflow:hidden}
+#mq2{display:inline-flex;will-change:transform}
+#mq2 span{font-size:clamp(40px,7vw,96px);font-weight:800;letter-spacing:-.04em;line-height:1;padding-right:.45em;color:transparent;-webkit-text-stroke:1.6px var(--ink)}
+#mq2 span.it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+.card{overflow:hidden}
+.card .idx{position:absolute;right:18px;bottom:-.18em;margin:0;font:800 clamp(150px,17vw,280px)/1 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:1.5px rgba(243,239,230,.16);pointer-events:none;z-index:0;transition:-webkit-text-stroke-color .4s}
+.card:hover .idx{-webkit-text-stroke-color:rgba(255,90,31,.55)}
+.card>*:not(.idx){position:relative;z-index:1}
+.card .art img{transform:scale(1.12) translateX(calc(var(--p,0) * -7%))}
+.card:hover .art img{transform:scale(1.18) translateX(calc(var(--p,0) * -7%))}
+.wct{margin-left:auto;margin-right:16px;align-self:flex-end;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--dim)}
+.wct #wcn{color:var(--bone);font-size:22px}
+.wct i{display:block;width:120px;height:2px;background:rgba(243,239,230,.18);border-radius:2px;overflow:hidden}
+.wct b{display:block;height:100%;width:100%;background:var(--sig);transform-origin:0 50%;transform:scaleX(0)}
+.vt{margin-left:0!important}
+@media(max-width:820px){.wct{display:none}}
+#path{position:relative}
+.rail{position:absolute;left:calc(var(--gx) + 4px);width:1px;background:rgba(243,239,230,.14);pointer-events:none}
+.rail i{display:block;width:100%;height:100%;background:linear-gradient(var(--sig),#ffb21a);transform-origin:50% 0;transform:scaleY(0)}
+@media(max-width:760px){.rail{display:none}}
+@media(prefers-reduced-motion:reduce){.badge svg{animation:none}.rail i{transform:none}}
+.mq>.mq2{display:block}
+.card::before{content:"";grid-column:1/-1;grid-row:1;height:8px}
+@media(max-width:820px){.card::before{display:none}}
 </style>
 </head>
 <body class="lock">
@@ -434,9 +473,10 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <p class="hs fu" style="--fd:1s">I build <em>full-stack products</em> with <em>AI inside</em> that people can actually use.</p>
 <p class="mono hq fu" style="--fd:1.15s">Three deployed full-stack projects, plus two more. Every number on this page is measured, with its catch next to it.</p>
 <p class="hp fu" style="--fd:1.25s"><a class="pri" href="#work">View projects</a><a href="assets/Karthik_Uppari_Resume.pdf" download>Download résumé</a><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a></p>
+<a class="badge fu" style="--fd:1.4s" href="#work" aria-label="See the work"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bp1" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bp1" startOffset="0">OPEN TO INTERNSHIPS · FULL-STACK + AI · 2026 · </textPath></text></svg><b aria-hidden="true">↗</b></a>
 <a class="scrl mono fu" style="--fd:1.3s" href="#manifesto">Scroll ↓</a>
 </header>
-<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div><div class="mq2"><div id="mq2"></div></div></div>
 
 <main id="main">
 <section id="manifesto" class="blk paper" aria-label="About">
@@ -449,7 +489,7 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 </div>
 </section>
 
-<section id="work" class="work" aria-label="Selected work"><div class="pin"><div class="wh"><p class="mono lbl" style="margin-bottom:12px;color:var(--dim)">Selected work</p><h2>Work</h2></div><div class="track" id="track"></div></div></section>
+<section id="work" class="work" aria-label="Selected work"><div class="pin"><div class="wh"><p class="mono lbl" style="margin-bottom:12px;color:var(--dim)">Selected work</p><h2>Work</h2><div class="wct mono" aria-hidden="true"><span id="wcn">01</span> / 05<i><b id="wcb"></b></i></div></div><div class="track" id="track"></div></div></section>
 
 <section id="evidence" class="ev" aria-labelledby="ev-h">
 <p class="mono lbl" style="color:var(--pd)">Evidence</p>
@@ -487,7 +527,7 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <div><h3>Tools</h3><p class="chips"><span>Git</span><span>GitHub</span><span>Vercel</span><span>Render</span></p></div>
 </div></section>
 
-<section id="path" class="blk dk" aria-labelledby="pa-h">
+<section id="path" class="blk dk" aria-labelledby="pa-h"><div class="rail" aria-hidden="true"><i></i></div>
 <p class="mono lbl" style="color:var(--dim)">Education and experience</p>
 <h2 class="big rv" id="pa-h">Path</h2>
 <div class="p rv"><span class="mono">2025 – 2029</span><div><h3>B.Tech, CS (AI/ML)</h3><p>NxtWave Institute of Advanced Technologies (NIAT). Foundations in C++, Python, data structures and algorithms, and machine learning. SGPA: 9.52 (Semester 3).</p></div></div>
@@ -534,6 +574,7 @@ h1{mix-blend-mode:normal;color:var(--bone);text-shadow:0 2px 40px rgba(7,8,13,.3
 <section id="contact" class="blk sigbg" aria-labelledby="ct-h">
 <p class="mono lbl">Contact</p><h2 class="sr" id="ct-h" style="position:absolute;width:1px;height:1px;overflow:hidden">Contact</h2>
 <a class="big" href="mailto:upparikarthik505@gmail.com" data-cur="Email">Let's talk.</a>
+<button class="badge cbadge" type="button" id="cbadge" aria-label="Copy email address"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bp2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bp2" startOffset="0">SAY HI · COPY MY EMAIL · SAY HI · COPY MY EMAIL · </textPath></text></svg><b aria-hidden="true">↗</b></button>
 <div class="btnr"><button id="cpe" aria-live="polite">Copy email</button><a href="https://github.com/karthik1122-code" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/karthik-uppari-4005a7373" target="_blank" rel="noopener">LinkedIn</a></div>
 <p class="cmail">upparikarthik505@gmail.com</p>
 <div class="cfoot mono"><span>Hyderabad, India · <span id="clk">IST</span></span><span>Vanilla JS, one WebGL shader, no framework</span><span>© 2026 Karthik Uppari</span></div>
@@ -1077,6 +1118,21 @@ function flap(el,txt,delay){el.setAttribute('aria-label',txt);const ch=[...txt];
   const p=Math.min(1,Math.max(0,scrollY/innerHeight));
   if(h&&p<1.05){h.style.transform=`translate3d(0,${(-p*120).toFixed(1)}px,0) scale(${(1-p*.12).toFixed(3)}) rotateX(${(p*18).toFixed(2)}deg)`;h.style.opacity=(1-p*.85).toFixed(3);h.style.transformOrigin='50% 100%';
    sub.forEach((e,k)=>{e.style.transform=`translate3d(0,${(-p*(40+k*20)).toFixed(1)}px,0)`;e.style.opacity=(1-p*1.4).toFixed(3)})}
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f)})();</script>
+
+<script>(function(){const RMx=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const m2=document.getElementById('mq2');if(m2){m2.innerHTML=Array(4).fill('<span>React</span><span class="it">Node</span><span>MongoDB</span><span class="it">Gemini</span><span>SSE</span><span class="it">Express</span>').join('')}
+ const cb=document.getElementById('cbadge');if(cb)cb.addEventListener('click',()=>{const b=document.getElementById('cpe');if(b)b.click()});
+ const tr=document.getElementById('track'),wcn=document.getElementById('wcn'),wcb=document.getElementById('wcb'),N=document.querySelectorAll('#track .card').length||5;
+ const path=document.getElementById('path'),rail=path&&path.querySelector('.rail'),ri=rail&&rail.querySelector('i');
+ function sizeRail(){if(!rail)return;const ps=path.querySelectorAll('.p');if(!ps.length)return;const a=ps[0],z=ps[ps.length-1];rail.style.top=(a.offsetTop+44)+'px';rail.style.height=(z.offsetTop+44-a.offsetTop-44)+'px'}
+ addEventListener('resize',sizeRail);addEventListener('load',sizeRail);setTimeout(sizeRail,800);sizeRail();
+ let x2=0,ly=scrollY,v=0;
+ function f(){const dy=scrollY-ly;ly=scrollY;v=v*.9+dy*.1;
+  if(m2&&!RMx){x2+=1.2+Math.abs(v)*.5;const w=m2.scrollWidth/2;if(x2>w)x2=0;m2.style.transform=`translateX(${x2-w}px)`}
+  if(tr&&wcn){const p=parseFloat(tr.style.getPropertyValue('--p'))||0;const k=Math.min(N-1,Math.floor(p*N));wcn.textContent='0'+(k+1);wcb.style.transform=`scaleX(${p.toFixed(3)})`}
+  if(ri){const r=rail.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));ri.style.transform=`scaleY(${RMx?1:p.toFixed(3)})`}
   requestAnimationFrame(f)}
  requestAnimationFrame(f)})();</script>
 </body>
